@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Aggregator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Add your background image and additional styles here */
+      .hero-section {
+        background: url("assets/img/image.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh; /* Adjust height as needed */
+      }
+
+      .hero-section-2 {
+        background: url("assets/img/second-wrap.png") center center;
+        background-size: cover;
+        color: white;
+        display: flex;
+        padding: 5em;
+        justify-content: center;
+        align-items: center;
+        height: 40vh; /* Adjust height as needed */
+        margin-top: 1.4em;
+      }
+
+      .overlay-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      /* Ensures the text stands out over the background */
+
+      .hero-section h1 {
+        font-size: 2.5rem; /* Adjust font size as needed */
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b; /* Adjust button color as needed */
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 20px; /* Rounded edges for button */
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a; /* Slightly darker on hover */
+      }
+
+      /* Adjust the navigation style as needed */
+
+      /* This is for the button on the navbar with distinct styling */
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .logo-slider {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 1);
+      }
+
+      .logo-slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+      }
+
+      .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20%;
+        height: 150px; /* Adjust height to fit logos */
+      }
+
+      .logo-slide img {
+        max-height: 100px; /* Adjust to your logo size */
+        max-width: 100%; /* Keeps the aspect ratio of logos */
+        object-fit: contain;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-20% * 5));
+        } /* 5 logos, each with 20% width */
+      }
+
+      /* If you have more than 5 logos, you need to copy them to fill the animation loop */
+      .logo-slide:nth-child(6) {
+        order: 1;
+      }
+      .logo-slide:nth-child(7) {
+        order: 2;
+      }
+      .logo-slide:nth-child(8) {
+        order: 3;
+      }
+      .logo-slide:nth-child(9) {
+        order: 4;
+      }
+      .logo-slide:nth-child(10) {
+        order: 5;
+      }
+
+      /* Pause the animation on hover */
+
+      .section-content-1 {
+        font-size: 14px;
+        font-weight: bold;
+        width: 26em;
+        margin-top: 0.6em;
+      }
+
+      .section-content-p {
+        font-size: 14px;
+        width: 36em;
+        margin-top: 1em;
+        margin-left: 2em;
+      }
+
+      .card-img-top {
+        height: 160px; /* Fixed height for demo purposes, adjust as needed */
+        object-fit: cover;
+      }
+      .card-share-icon {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .read-more {
+        color: #c31e32;
+        text-decoration: none;
+      }
+
+      .custom-btn {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 10px;
+        width: 12em;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff; /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding: 180px 0;
+      }
+
+      .footer-title {
+        color: #fff; /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        font-size: 24px; /* Adjust size as needed */
+        color: #fff; /* Adjust color as needed */
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff; /* Adjust the button text color as needed */
+        background-color: #f00; /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff; /* Adjust on hover */
+        background-color: #c00; /* Darken the background on hover */
+      }
+
+      @media (max-width: 768px) {
+        .section-content-p {
+          font-size: 14px;
+          width: 24em;
+        }
+
+        .overlay {
+          /* Black background with opacity */
+          height: 100%;
+          display: flex;
+          font-size: 3em;
+          align-items: center;
+          font-weight: bold;
+          justify-content: center;
+          flex-direction: column;
+        }
+        .hero-section-2 {
+          background: url("assets/img/second-wrap.png") center center;
+          background-size: cover;
+          color: white;
+          display: flex;
+          padding: 2em;
+          justify-content: center;
+          align-items: center;
+          height: 40vh; /* Adjust height as needed */
+          margin-top: 1.4em;
+        }
+
+        .overlay-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          font-size: 11px;
+          font-weight: 300;
+          text-align: center;
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+
+        .second-heading {
+          font-size: 1.4em;
+        }
+        .logo-slide img {
+          padding: 4px;
+
+          /* Adjust the max-height for small devices */
+        }
+        .custom-section {
+          padding: 15px 0; /* Less padding on small screens */
+        }
+        .custom-footer {
+          display: block;
+          background-color: rgba(1, 33, 105, 1);
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+          height: 67em;
+        }
+
+        .footer-text {
+          color: white; /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff; /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px; /* Adjust size as needed */
+          color: #fff; /* Adjust color as needed */
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff; /* Adjust the button text color as needed */
+          background-color: #f00; /* Adjust the button background color as needed */
+        }
+
+        .btn-newsletter:hover {
+          color: #fff; /* Adjust on hover */
+          background-color: #c00; /* Darken the background on hover */
+        }
+      }
+
+      /* Center content vertically and horizontally */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Resource 1</a>
+              <a class="dropdown-item" href="#">Resource 2</a>
+              <a class="dropdown-item" href="#">Resource 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Partners
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Partner 1</a>
+              <a class="dropdown-item" href="#">Partner 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Service 1</a>
+              <a class="dropdown-item" href="#">Service 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Our Team</a>
+              <a class="dropdown-item" href="#">Our History</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay"></div>
+    </section>
+
+    <section class="hero-section-2">
+      <div class="overlay-2">
+        <h2 class="second-heading">
+          Embracing the Digital Frontier: Your Partner for Transformation
+        </h2>
+        <p style="margin-top: 1.3em">
+          In an age of rapid technological shifts and the burgeoning Gig
+          economy, MatrixOne Tech Solutions emerges as your pioneering ally.
+          Embracing the disruptive ethos of Uberization, we redefine the IT
+          paradigm, offering not just a partnership but a gateway to thriving in
+          the Gig economy. Our commitment
+        </p>
+      </div>
+    </section>
+
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4">
+          <h2>Revolutionizing Operations Essence of IT Service Management</h2>
+          <p>
+            In today's fast-paced digital landscape, where businesses rely on
+            technology for virtually every aspect of their operations, the role
+            of IT Service Management (ITSM) stands as a linchpin for
+            organizational success. ITSM is not merely a set of practices but a
+            strategic approach that harmonizes technology, processes, and people
+            to optimize service delivery, drive efficiency, and ensure seamless
+            operations.
+          </p>
+
+          <a href="#" class="custom-btn">Reach Out to us</a>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4">
+          <img
+            src="assets/img/section-two-img1.png"
+            alt="Globe Network"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4 order-lg-2">
+          <h2>IT Service Management Evolutions</h2>
+          <p>
+            As technology continues to evolve, so does the landscape of IT
+            service delivery. ITSM has transformed from a reactive, break-fix
+            approach to a proactive and holistic framework that revolves around
+            meeting business objectives and customer needs. It encompasses an
+            array of methodologies, including ITIL (Information Technology
+            Infrastructure Library), DevOps, and Agile, tailored to cater to
+            diverse business requirements.
+          </p>
+          <a href="#" class="custom-btn">Connect with us</a>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4 order-lg-1">
+          <img
+            src="assets/img/section-two-img2.png"
+            alt="Network Illustration"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-6 col-md-6 mb-3">
+          <h2>IT Service Management Core Tenets Customer-Centric Focus</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="section-content-1">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Customer Centric Focus
+              </div>
+              <p class="section-content-p">
+                At the heart of ITSM lies a customer-centric approach,
+                emphasizing the importance of aligning IT services with the
+                needs and expectations of internal and external customers. This
+                shift in mindset ensures that services are not just
+                technologically efficient but also deliver value to the business
+                and its stakeholders.
+              </p>
+              <div class="section-content-1">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Process Optimization
+              </div>
+              <p class="section-content-p">
+                ITSM frameworks revolve around optimizing processes, workflows,
+                and procedures to enhance efficiency and reduce downtime. By
+                standardizing and automating tasks, organizations can streamline
+                operations and improve overall productivity.
+              </p>
+              <div class="section-content-1">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Continuous Improvement
+              </div>
+              <p class="section-content-p">
+                At the heart of ITSM lies a customer-centric approach,
+                emphasizing the importance of aligning IT services with the
+                needs and expectations of internal and external customers. This
+                shift in mindset ensures that services are not just
+                technologically efficient but also deliver value to the business
+                and its stakeholders.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-4 mb-4">
+          <img
+            src="assets/img/section-two-img3.png"
+            alt="Globe Network"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <center><h2>Our Partners</h2></center>
+    </div>
+    <div class="mt-5">
+      <div class="logo-slider">
+        <div class="logo-slide-track">
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p class="social-media-icons">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <p class="footer-item">About us</p>
+            <p class="footer-item">Services</p>
+            <p class="footer-item">Hire From us</p>
+            <p class="footer-item">Resources</p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">Support</h5>
+            <p class="footer-item">Help</p>
+            <p class="footer-item">Terms and Conditions</p>
+            <p class="footer-item">Privacy Policy</p>
+            <p class="footer-item">Returns and Policy</p>
+            <p class="footer-item">Partners</p>
+          </div>
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

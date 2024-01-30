@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Aggregator</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .hero-section {
+        background: url("assets/img/sucess-section-hero.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 20px;
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a;
+      }
+      .overlay {
+        display: none;
+      }
+
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .logo-slider {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 1);
+      }
+
+      .logo-slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+      }
+
+      .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20%;
+        height: 150px;
+      }
+
+      .logo-slide img {
+        max-height: 100px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-20% * 5));
+        } /* 5 logos, each with 20% width */
+      }
+
+      .logo-slide:nth-child(6) {
+        order: 1;
+      }
+      .logo-slide:nth-child(7) {
+        order: 2;
+      }
+      .logo-slide:nth-child(8) {
+        order: 3;
+      }
+      .logo-slide:nth-child(9) {
+        order: 4;
+      }
+      .logo-slide:nth-child(10) {
+        order: 5;
+      }
+
+      .card-title {
+        text-align: left;
+      }
+
+      .card-text {
+        text-align: left;
+      }
+
+      a.nav-link {
+        color: black;
+      }
+      .story-section {
+        padding: 40px 0;
+      }
+      .story-image {
+        background: url("assets/img/sucess-office.png") no-repeat center center;
+        background-size: cover;
+        height: 30em;
+      }
+      .story-content {
+        padding: 20px;
+      }
+
+      .story-para {
+        font-size: 0.8em;
+      }
+
+      .story-div {
+        margin-top: 26px;
+      }
+
+      .btn-story {
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        padding: 12px 63px;
+        color: white;
+        border-radius: 29px;
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff; /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding: 180px 0;
+      }
+
+      .footer-title {
+        color: #fff; /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        font-size: 24px; /* Adjust size as needed */
+        color: #fff; /* Adjust color as needed */
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff; /* Adjust the button text color as needed */
+        background-color: #f00; /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff; /* Adjust on hover */
+        background-color: #c00; /* Darken the background on hover */
+      }
+
+      @media (max-width: 768px) {
+        .logo-slide img {
+          padding: 4px;
+        }
+        .hero-section {
+          background: url("assets/img/sucess-mobile.png") center center;
+          background-size: cover;
+          color: white;
+          text-align: center;
+          height: 60vh;
+        }
+
+        .overlay {
+          height: 100%;
+          display: flex;
+          font-size: 4em;
+          font-weight: bold;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .custom-footer {
+          display: block;
+          background-color: rgba(1, 33, 105, 1);
+        }
+        .story-image {
+          height: 200px;
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+          height: 67em;
+        }
+
+        .footer-text {
+          color: white; /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff; /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px; /* Adjust size as needed */
+          color: #fff; /* Adjust color as needed */
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff; /* Adjust the button text color as needed */
+          background-color: #f00; /* Adjust the button background color as needed */
+        }
+
+        .btn-newsletter:hover {
+          color: #fff; /* Adjust on hover */
+          background-color: #c00; /* Darken the background on hover */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .story-image {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Resource 1</a>
+              <a class="dropdown-item" href="#">Resource 2</a>
+              <a class="dropdown-item" href="#">Resource 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Partners
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Partner 1</a>
+              <a class="dropdown-item" href="#">Partner 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Service 1</a>
+              <a class="dropdown-item" href="#">Service 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Our Team</a>
+              <a class="dropdown-item" href="#">Our History</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay">SUCCESS</div>
+    </section>
+
+    <section class="story-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="story-image"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="story-content">
+              <h5>Our Success Story</h5>
+              <h4>
+                We are not just another IT solutions provider; we are your
+                trusted partner in achieving IT success.
+              </h4>
+              <p class="story-para">
+                Dive into the realm of NoviceTech for excellent success stories,
+                where our collaborative approach with expert teams unfolds a
+                tapestry of technological access across a spectrum of
+                cutting-edge technologies. Witness our joint triumphs in
+                Business Intelligence, BI & Cloud Solutions, Data Analytics,
+                E-commerce, eLearning, Open Source, ERP Solutions, and Web &
+                Mobile App Development. These success stories spotlight the
+                seamless synergy between our organization and our esteemed
+                partners, showcasing our joint commitment to delivering
+                exceptional outcomes. <br />Our relentless pursuit of excellence
+                in these domains stands as a testament to our collaborative
+                approach, where we, alongside our esteemed partners, stay at the
+                forefront of technological advancements. Together, we reimagine
+                industry benchmarks, solidifying our joint reputation as leaders
+                in delivering solutions that surpass expectations and set new
+                industry standards.
+              </p>
+              <div class="story-div">
+                <a href="#" class="btn-story">Let's Connect</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container text-center mt-5">
+      <h2>Best of our Work</h2>
+      <p>Reach out to us to receive innovative solutions for your business</p>
+
+      <ul class="nav nav-tabs justify-content-center mt-3">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#powerbi"
+            >Power BI</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#dataAnalytics"
+            >Data Analytics</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#cloud">Cloud</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#MobileDevelopment"
+            >Mobile Development</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#OdoERP">Odo ERP</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#Salesforce"
+            >Salesforce</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#WebDevelopment"
+            >Web Development</a
+          >
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="tab-pane container fade" id="powerbi">
+          Power BI content goes here
+          <div class="container">
+            <div class="row mt-4">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">KIBANA ELASTIC SEARCH-CASE STUDY</h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Employee Tracking Dashboards
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Implementation for POS Integration
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row mt-4">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">KIBANA ELASTIC SEARCH-CASE STUDY</h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Employee Tracking Dashboards
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Implementation for POS Integration
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row mt-4">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/sucess-fold.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">KIBANA ELASTIC SEARCH-CASE STUDY</h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Employee Tracking Dashboards
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Implementation for POS Integration
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="dataAnalytics">
+          <div class="container">
+            <div class="row mt-4">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">KIBANA ELASTIC SEARCH-CASE STUDY</h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Employee Tracking Dashboards
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Implementation for POS Integration
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row mt-4">
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">KIBANA ELASTIC SEARCH-CASE STUDY</h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Employee Tracking Dashboards
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card">
+                  <img
+                    class="card-img-top"
+                    src="assets/img/hero-section.png"
+                    alt="Card image"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Talend-Implementation for POS Integration
+                    </h5>
+                    <p class="card-text">
+                      MatrixOne is committed to cost-effectiveness, leveraging
+                      our partner network to deliver competitive pricing while
+                      maintaining the highest quality standards.
+                    </p>
+                    <a href="#" class="">View More</a>
+                    <img
+                      src="assets/img/arrow-right.png"
+                      class="arrow-right-img"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane container fade" id="cloud">
+          Cloud content
+          <div class="row mt-4">Your cards for Cloud go here</div>
+        </div>
+
+        <div class="tab-pane container fade" id="MobileDevelopment">
+          Cloud content
+          <div class="row mt-4">Your cards for Cloud go here</div>
+        </div>
+
+        <div class="tab-pane container fade" id="OdoERP">
+          Cloud content
+          <div class="row mt-4">Your cards for Cloud go here</div>
+        </div>
+        <div class="tab-pane container fade" id="Salesforce">
+          Cloud content
+          <div class="row mt-4">Your cards for Cloud go here</div>
+        </div>
+        <div class="tab-pane container fade" id="WebDevelopment">
+          Cloud content
+          <div class="row mt-4">Your cards for Cloud go here</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <div class="logo-slider">
+        <div class="logo-slide-track">
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p class="social-media-icons">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <p class="footer-item">About us</p>
+            <p class="footer-item">Services</p>
+            <p class="footer-item">Hire From us</p>
+            <p class="footer-item">Resources</p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">Support</h5>
+            <p class="footer-item">Help</p>
+            <p class="footer-item">Terms and Conditions</p>
+            <p class="footer-item">Privacy Policy</p>
+            <p class="footer-item">Returns and Policy</p>
+            <p class="footer-item">Partners</p>
+          </div>
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

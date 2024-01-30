@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Aggregator</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Add your background image and additional styles here */
+      .hero-section {
+        background: url("assets/img/homepage-banner.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh; /* Adjust height as needed */
+      }
+
+      /* Ensures the text stands out over the background */
+      .overlay {
+        /* Black background with opacity */
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .hero-section h1 {
+        font-size: 1.8rem; /* Adjust font size as needed */
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b; /* Adjust button color as needed */
+        border: none;
+        padding: 0.6rem 2rem;
+        border-radius: 20px; /* Rounded edges for button */
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a; /* Slightly darker on hover */
+      }
+
+      /* Adjust the navigation style as needed */
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .checkmark-list li {
+        position: relative;
+        padding-left: 1.5em;
+        margin-bottom: 0.5em;
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .checkmark-list li::before {
+        position: absolute;
+        left: 0;
+        /* Adjust the color to match your design */
+      }
+
+      .about-section {
+        padding: 2em 0;
+      }
+      .about-section-about {
+        color: rgba(195, 30, 50, 1);
+        font-size: 1.4em;
+      }
+      .about-text {
+        padding-right: 1em;
+      }
+
+      /* Responsive image on the right */
+      .about-image {
+        background: url("assets/img/second-section-image.png") no-repeat center;
+        background-size: cover;
+      }
+
+      .about-section-head {
+        color: rgba(7, 8, 94, 1);
+      }
+      .special-color {
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .logo-slider {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 1);
+      }
+
+      .logo-slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+      }
+
+      .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20%;
+        height: 150px; /* Adjust height to fit logos */
+      }
+
+      .logo-slide img {
+        max-height: 100px; /* Adjust to your logo size */
+        max-width: 100%; /* Keeps the aspect ratio of logos */
+        object-fit: contain;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-20% * 5));
+        } /* 5 logos, each with 20% width */
+      }
+
+      /* If you have more than 5 logos, you need to copy them to fill the animation loop */
+      .logo-slide:nth-child(6) {
+        order: 1;
+      }
+      .logo-slide:nth-child(7) {
+        order: 2;
+      }
+      .logo-slide:nth-child(8) {
+        order: 3;
+      }
+      .logo-slide:nth-child(9) {
+        order: 4;
+      }
+      .logo-slide:nth-child(10) {
+        order: 5;
+      }
+
+      /* Pause the animation on hover */
+      .logo-slider:hover .logo-slide-track {
+        animation-play-state: paused;
+      }
+
+      .service-card {
+        border: none;
+        border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-card:hover {
+        background-color: #07085e; /* Dark blue color */
+        color: #ffffff;
+      }
+
+      .service-card .icon-wrapper {
+        /* Red color for the icon background */
+        width: 50px;
+        height: 50px;
+        gap: 3em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      .service-card .icon-wrapper img {
+        width: 44px; /* Adjust based on your icon size */
+        height: auto;
+      }
+
+      .icon-wrapper-1 img {
+        width: 28px;
+        margin-bottom: 10px; /* Adjust based on your icon size */
+        height: auto;
+      }
+
+      .service-card-title {
+        font-size: 1.25rem; /* Adjust title size as needed */
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      .service-card-body {
+        padding: 1.5rem;
+      }
+      .service-card-text {
+        text-align: left;
+      }
+
+      /* Ensure colors change on hover */
+      .service-card:hover .service-card-title,
+      .service-card:hover .service-card-text,
+      .service-card:hover .icon-wrapper img {
+        color: #ffffff;
+        text-align: left;
+      }
+
+      .background-image {
+        background: url("assets/img/banner-section.png");
+        background-size: cover;
+        height: 50vh; /* Set the background height to cover the viewport height */
+      }
+
+      /* Center content vertically and horizontally */
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Ensure the container takes the full height of the background */
+        color: #ffffff; /* Text color on the background */
+      }
+
+      /* Style for your heading */
+      .custom-heading {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+      }
+
+      /* Style for your paragraph */
+      .custom-paragraph {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .moving-ards-container {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .moving-ards {
+        display: flex;
+        animation: moveSlideshow 20s linear infinite;
+      }
+
+      @keyframes moveSlideshow {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(
+            calc(-250px * 4)
+          ); /* Assuming card width+margin is 250px */
+        }
+      }
+      .center-cont {
+        margin-bottom: 4em;
+      }
+      .ard {
+        min-width: 280px; /* Set the card width */
+        margin-right: 15px; /* Space between cards */
+        margin-top: 24px;
+        gap: 16em;
+      }
+
+      /* This is to create an infinite effect by cloning the cards */
+      .moving-ards::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        background-image: inherit;
+        z-index: -1;
+      }
+
+      .contact-section {
+        background-color: #f8f9fa; /* Adjust the background color as needed */
+        padding: 40px 0;
+      }
+
+      .contact-form {
+        background-color: #ffffff; /* White background for the form */
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+      }
+
+      .contact-form .btn {
+        background-color: #ff0000; /* Red color for the SEND button */
+        color: #ffffff;
+        border: none;
+      }
+
+      .contact-form .btn:hover {
+        background-color: darken(#ff0000, 10%); /* Slightly darker on hover */
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: row;
+        /* Dark blue for the info section */
+        color: black; /* White text color */
+        gap: 10px;
+        border-radius: 8px;
+      }
+
+      .form-select {
+        width: 14em;
+        height: 2.4em;
+      }
+
+      .about-head1 {
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .about-head2 {
+        color: rgba(7, 8, 94, 1);
+      }
+      .contact-info .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+      }
+
+      .contact-info .info-item img {
+        margin-right: 10px; /* Space between icon and text */
+      }
+
+      /* Adjust this path to where your image is stored */
+      .contact-image {
+        background: url("assets/img/form-side-image.png") no-repeat center
+          center;
+        background-size: cover;
+        height: 26em;
+      }
+      .carousel-indicators li {
+        height: 10px;
+        width: 10px;
+      }
+      .carousel-item .card {
+        margin: 5px;
+        margin-bottom: 4em;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%;
+      }
+      .carousel-indicators {
+        justify-content: center;
+      }
+      .carousel-indicators [data-slide-to] {
+        margin: 0 2px;
+        background-color: #000;
+      }
+      .carousel-indicators .active {
+        background-color: #007bff;
+      }
+
+      .last-card-section {
+        margin-top: 6em;
+        margin-bottom: 3em;
+      }
+
+      @keyframes moveRight {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .scrolling-row {
+        display: flex;
+        animation: moveRight 10s linear infinite;
+      }
+      .scrolling-row .col-lg-4 {
+        flex: 0 0 auto;
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff; /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding: 180px 0;
+      }
+
+      .footer-title {
+        color: #fff; /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        font-size: 24px; /* Adjust size as needed */
+        color: #fff; /* Adjust color as needed */
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff; /* Adjust the button text color as needed */
+        background-color: #f00; /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff; /* Adjust on hover */
+        background-color: #c00; /* Darken the background on hover */
+      }
+
+      @media (max-width: 768px) {
+        .footer-upper {
+          text-align: center;
+        }
+        .hero-section h1 {
+          font-size: 1rem; /* Adjust font size as needed */
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+
+        .custom-heading {
+          font-size: 1.4em;
+        }
+        .custom-paragraph {
+          font-size: 1em;
+        }
+        .contact-image {
+          background: url(assets/img/form-side-image.png) no-repeat center
+            center;
+          background-size: cover;
+          height: 20em;
+          margin: 10px;
+        }
+
+        .carousel-item .d-flex {
+          flex-direction: column;
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+          height: 67em;
+        }
+
+        .footer-text {
+          color: white; /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff; /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px; /* Adjust size as needed */
+          color: #fff; /* Adjust color as needed */
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff; /* Adjust the button text color as needed */
+          background-color: #f00; /* Adjust the button background color as needed */
+        }
+
+        .btn-newsletter:hover {
+          color: #fff; /* Adjust on hover */
+          background-color: #c00; /* Darken the background on hover */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Pmo.html">PMO-Solution</a>
+              <a class="dropdown-item" href="aws.html">AWS</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Partners
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Partner 1</a>
+              <a class="dropdown-item" href="#">Partner 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="IT services.html">IT-Service</a>
+              <a class="dropdown-item" href="services.html">Managed-Service</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About-us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay">
+        <h1>My name is MatrixOne Tech Solutions</h1>
+        <h1>
+          We are Aggregator of IT Organizations - a Workforce Uberization
+          Specialist
+        </h1>
+        <a href="#" class="btn-nav">Let's Connect</a>
+      </div>
+    </section>
+
+    <section class="about-us-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4 class="mb-3 about-head1">
+              <img src="assets/img/about-us-vector.svg" alt="" srcset="" />
+              About us
+            </h4>
+            <h3 class="about-head2">Our Story</h3>
+            <p>
+              MatrixOne Tech Solutions, your gateway to a diverse and dynamic IT
+              ecosystem. At MatrixOne, we proudly bear the moniker of being an
+              "Aggregator of IT Organizations
+            </p>
+            <h3>Our Mission</h3>
+            <p>
+              To provide a extensive and meticulously organized platform where
+              clients can seamlessly explore a wide array of IT services,
+              consultancies, software solutions and technology consulting
+              vendors. In a fast-paced digital world where technology is
+              evolving at an unprecedented rate, we understand the critical role
+              that technology plays in shaping the future of businesses.
+            </p>
+            <ul class="list-unstyled mt-4">
+              <li>
+                <img
+                  width="20px"
+                  src="assets/img/check-circle.png"
+                  alt=""
+                  srcset=""
+                />
+                strategically partners with over 300+ organizations each
+                offering a unique invaluable set of services
+              </li>
+              <li>
+                <img
+                  width="20px"
+                  src="assets/img/check-circle.png"
+                  alt=""
+                  srcset=""
+                />bring the concept of ‘Uberization’ to the IT industry
+                providing a flexible and scalable workforce tailored to your
+                precise needs.
+              </li>
+              <li>
+                <img
+                  width="20px"
+                  src="assets/img/check-circle.png"
+                  alt=""
+                  srcset=""
+                />commitment to excellence transcends geographical boundaries,
+                reaching across diverse technology landscapes.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5">
+            <!-- Include your image here -->
+            <img
+              src="assets/img/second-section-image.png"
+              class="img-fluid"
+              alt="Responsive image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-5">
+      <div class="logo-slider">
+        <div class="logo-slide-track">
+          <!-- Duplicate each logo slide twice if you have only 5 logos -->
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+          <!-- Duplicate slides for continuous effect -->
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <h2 class="text-center mb-4">
+        Why <span class="special-color">Work</span> With Us
+      </h2>
+      <p class="text-center mb-5 text-secondary">Benefits of Working With Us</p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="card service-card">
+            <div class="card-body service-card-body text-center">
+              <div class="icon-wrapper">
+                <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+              </div>
+              <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+              <p class="service-card-text">
+                We tailor IT solutions to your specific requirements, whether it
+                is web & mobile, cloud computing, AI, data analytics or other
+                cutting edge technologies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <p class="service-card-text">
+              We tailor IT solutions to your specific requirements, whether it
+              is web & mobile, cloud computing, AI, data analytics or other
+              cutting edge technologies.
+            </p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <p class="service-card-text">
+              We tailor IT solutions to your specific requirements, whether it
+              is web & mobile, cloud computing, AI, data analytics or other
+              cutting edge technologies.
+            </p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <p class="service-card-text">
+              We tailor IT solutions to your specific requirements, whether it
+              is web & mobile, cloud computing, AI, data analytics or other
+              cutting edge technologies.
+            </p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <p class="service-card-text">
+              We tailor IT solutions to your specific requirements, whether it
+              is web & mobile, cloud computing, AI, data analytics or other
+              cutting edge technologies.
+            </p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <p class="service-card-text">
+              We tailor IT solutions to your specific requirements, whether it
+              is web & mobile, cloud computing, AI, data analytics or other
+              cutting edge technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for each card, replacing the icon and text as necessary -->
+    </div>
+
+    <div class="background-image">
+      <div class="content-container">
+        <h1 class="custom-heading">Explore Fresh Opportunities</h1>
+        <p class="custom-paragraph">
+          Discover dynamic staffing roles and exciting managed projects
+          opportunities waiting for your expertise to make an impact.
+        </p>
+        <!-- Add your content here -->
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <center class="center-cont">
+        <h2>Our <span class="special-color">Services</span></h2>
+        <p>Benefits of Working With Us</p>
+      </center>
+      <div class="moving-ards-container">
+        <div class="moving-ards">
+          <!-- Card 1 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-1.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">Bench Sales Services</h5>
+              <p class="ard-text">
+                Flexible Workforce, Exceptional Results; Our Uberization
+                Strategy Transforms Us into more than just Bench Sellers; We’re
+                Matchmakers for Your Success.
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-2.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">IT Projects</h5>
+              <p class="ard-text">
+                Unlock your Tech Potential with MatrixOne: 300+ Partners Tackle
+                IT Complexity via the Partner-Powered Project Sales Platform
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-3.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">IT PMO Services</h5>
+              <p class="ard-text">
+                Elevate Execution with Tailored Agile PMO Solutions
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-4.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">IT products</h5>
+              <p class="ard-text">
+                Unleash the Potential of Emerging Technologies: AI, ML,
+                Blockchain, and Cloud with MatrixOne. Transform your Tech into
+                Profits with Our IT Solutions.
+              </p>
+            </div>
+          </div>
+          <!-- Duplicate cards for seamless infinite animation -->
+          <!-- Duplicate Card 1 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-1.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">Bench Sales Services</h5>
+              <p class="ard-text">
+                Flexible Workforce, Exceptional Results; Our Uberization
+                Strategy Transforms Us into more than just Bench Sellers; We’re
+                Matchmakers for Your Success.
+              </p>
+            </div>
+          </div>
+          <!-- Duplicate Card 2 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-2.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">IT Projects</h5>
+              <p class="ard-text">
+                Unlock your Tech Potential with MatrixOne: 300+ Partners Tackle
+                IT Complexity via the Partner-Powered Project Sales Platform
+              </p>
+            </div>
+          </div>
+          <!-- Duplicate Card 3 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-3.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">IT PMO Services</h5>
+              <p class="ard-text">
+                Elevate Execution with Tailored Agile PMO Solutions
+              </p>
+            </div>
+          </div>
+          <!-- Duplicate Card 4 -->
+          <div class="ard">
+            <div class="ard-body">
+              <div class="icon-wrapper-1">
+                <img src="assets/img/icon-4.png" alt="Icon 1" />
+              </div>
+              <h5 class="ard-title">IT products</h5>
+              <p class="ard-text">
+                Unleash the Potential of Emerging Technologies: AI, ML,
+                Blockchain, and Cloud with MatrixOne. Transform your Tech into
+                Profits with Our IT Solutions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li
+            data-target="#testimonialCarousel"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+          <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+          <!-- Add as many indicators as needed -->
+        </ol>
+        <div class="carousel-inner">
+          <center class="center-cont">
+            <h2>
+              Proud <span class="special-color">projects</span> that make us
+              stand out
+            </h2>
+            <p>Proud projects that make us stand out</p>
+          </center>
+          <div class="carousel-item active">
+            <div class="d-flex">
+              <!-- Add your first 4 cards here -->
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-1.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Azure & AWS Migration</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-2.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Power Bi</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-3.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Analytics</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-4.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Salesforce</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <!-- Add your second set of 4 cards here -->
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-1.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Azure & AWS Migration</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-2.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Power Bi</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-3.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Analytics</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-4.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Salesforce</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Continue adding carousel-item divs for additional sets of 4 cards -->
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <div class="container">
+        <center class="center-cont">
+          <h2>Need any <span class="special-color">help!</span> Contact us</h2>
+          <p>
+            Reach out to us to receive innovative solutions for your business
+          </p>
+        </center>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="contact-form">
+              <h2>Get in <span class="special-color">Touch</span></h2>
+              <form>
+                <div class="mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name *"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Phone number *"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <select class="form-select" aria-label="How did you find us?">
+                    <option selected>How did you find us?</option>
+                    <option value="1">Search Engine</option>
+                    <option value="2">Friend</option>
+                    <option value="3">Advertisement</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">SEND</button>
+              </form>
+              <div class="contact-info mt-4">
+                <div class="info-item">
+                  <img src="assets\img\phone-logo.png" alt="Phone" />
+                  <span>03 5432 1234</span>
+                </div>
+                <div class="info-item">
+                  <img src="assets\img\fax-logo.png" alt="Fax" />
+                  <span>03 5432 1234</span>
+                </div>
+                <div class="info-item">
+                  <img src="assets\img\email-logo.png" alt="Email" />
+                  <span>info@marcc.com.au</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 contact-image">
+            <!-- Background image is set in the CSS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p class="social-media-icons">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <p class="footer-item">About us</p>
+            <p class="footer-item">Services</p>
+            <p class="footer-item">Hire From us</p>
+            <p class="footer-item">Resources</p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">Support</h5>
+            <p class="footer-item">Help</p>
+            <p class="footer-item">Terms and Conditions</p>
+            <p class="footer-item">Privacy Policy</p>
+            <p class="footer-item">Returns and Policy</p>
+            <p class="footer-item">Partners</p>
+          </div>
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

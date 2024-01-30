@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Aggregator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .hero-section {
+        background: url("assets/img/about-hero.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 20px;
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a;
+      }
+
+      .overlay {
+        font-size: 3em;
+        font-weight: bold;
+      }
+
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .logo-slider {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 1);
+      }
+
+      .logo-slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+      }
+
+      .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20%;
+        height: 150px;
+      }
+
+      .logo-slide img {
+        max-height: 100px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-20% * 5));
+        } /* 5 logos, each with 20% width */
+      }
+
+      /* If you have more than 5 logos, you need to copy them to fill the animation loop */
+      .logo-slide:nth-child(6) {
+        order: 1;
+      }
+      .logo-slide:nth-child(7) {
+        order: 2;
+      }
+      .logo-slide:nth-child(8) {
+        order: 3;
+      }
+      .logo-slide:nth-child(9) {
+        order: 4;
+      }
+      .logo-slide:nth-child(10) {
+        order: 5;
+      }
+      .section-title-mini-1 {
+        color: rgba(195, 30, 50, 1);
+      }
+      .team-member {
+        margin-bottom: 30px;
+        text-align: center;
+        background-color: white;
+      }
+      .team-member img {
+        border-radius: 50%;
+      }
+      .team-section {
+        padding: 50px 0;
+      }
+
+      .team-heading {
+        font-size: 1.2em;
+        margin-top: 1em;
+        text-align: left;
+      }
+
+      .team-para-1 {
+        text-align: left;
+      }
+
+      /* Pause the animation on hover */
+
+      .section-content-1 {
+        font-size: 14px;
+        font-weight: bold;
+        width: 26em;
+        margin-top: 0.6em;
+      }
+      .about-headings {
+        color: rgba(7, 8, 94, 1);
+      }
+      .section-content-p {
+        font-size: 14px;
+        width: 36em;
+      }
+
+      .card-img-top {
+        height: 160px; /* Fixed height for demo purposes, adjust as needed */
+        object-fit: cover;
+      }
+      .card-share-icon {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .read-more {
+        color: #c31e32;
+        text-decoration: none;
+      }
+
+      .custom-btn {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 10px;
+        width: 12em;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .testimonial-slider {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+      }
+      .testimonial-item {
+        text-align: center;
+        margin: 0 auto;
+        padding: 30px;
+        border: none;
+        background: white;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+      }
+      .testimonial-quote {
+        font-size: 3rem;
+        color: #007bff;
+      }
+      .carousel-indicators {
+        bottom: -50px;
+        display: none;
+      }
+
+      .carousel-item {
+        padding: 8em;
+      }
+      .carousel-indicators li {
+        background-color: #007bff;
+      }
+      .carousel-indicators .active {
+        background-color: #0056b3;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-size: 100%;
+        border-radius: 50%;
+        background-color: #007bff;
+      }
+      .carousel-item {
+        transition: transform 2s ease, opacity 0.5s ease-out;
+      }
+      /* This is to adjust the image/logo size inside the testimonial */
+      .testimonial-logo img {
+        max-height: 50px; /* Adjust the size as needed */
+        margin-bottom: 20px;
+      }
+      .testimonial-image {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4em;
+      }
+      .testimonial-heading {
+        font-size: 2em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .testimonial-text {
+        font-size: 0.7em;
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff; /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding: 180px 0;
+      }
+
+      .footer-title {
+        color: #fff; /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        font-size: 24px; /* Adjust size as needed */
+        color: #fff; /* Adjust color as needed */
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff; /* Adjust the button text color as needed */
+        background-color: #f00; /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff; /* Adjust on hover */
+        background-color: #c00; /* Darken the background on hover */
+      }
+
+      @media (max-width: 768px) {
+        .section-content-p {
+          font-size: 14px;
+          width: 24em;
+        }
+
+        .overlay {
+          /* Black background with opacity */
+          height: 100%;
+          display: flex;
+          font-size: 3em;
+          align-items: center;
+          font-weight: bold;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .logo-slide img {
+          padding: 4px;
+
+          /* Adjust the max-height for small devices */
+        }
+
+        .team-heading {
+          text-align: center;
+        }
+
+        .team-para-1 {
+          text-align: center;
+        }
+        .testimonial-heading {
+          font-size: 2em;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .testimonial-text {
+          font-size: 0.8em;
+        }
+        .testimonial-image {
+          width: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 4em;
+          padding-left: 6em;
+        }
+        .carousel-item {
+          padding: 0em;
+        }
+        .custom-section {
+          padding: 15px 0; /* Less padding on small screens */
+        }
+        .custom-footer {
+          display: block;
+          background-color: rgba(1, 33, 105, 1);
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+          height: 67em;
+        }
+
+        .footer-text {
+          color: white; /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff; /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px; /* Adjust size as needed */
+          color: #fff; /* Adjust color as needed */
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff; /* Adjust the button text color as needed */
+          background-color: #f00; /* Adjust the button background color as needed */
+        }
+
+        .btn-newsletter:hover {
+          color: #fff; /* Adjust on hover */
+          background-color: #c00; /* Darken the background on hover */
+        }
+      }
+
+      /* Center content vertically and horizontally */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Resource 1</a>
+              <a class="dropdown-item" href="#">Resource 2</a>
+              <a class="dropdown-item" href="#">Resource 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Partners
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Partner 1</a>
+              <a class="dropdown-item" href="#">Partner 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Service 1</a>
+              <a class="dropdown-item" href="#">Service 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Our Team</a>
+              <a class="dropdown-item" href="#">Our History</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay">About us</div>
+    </section>
+
+    <div class="container mt-5">
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-6 col-md-6 mb-3">
+          <h5 class="section-title-mini-1">
+            <img src="assets/img/Vector 13.png" alt="" srcset="" />
+            15 years of unwavering commitment to excellence, innovation, and
+            service
+          </h5>
+
+          <h2 class="about-headings">
+            We are not just another IT solutions provider; we are your trusted
+            partner in achieving IT success.
+          </h2>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="section-content-p">
+                The GIG Economy has arrived and is here to stay, transcending
+                generations and sectors. MatrixOne stands as a pioneering force
+                in this transformative wave, offering you the flexibility and
+                independence that gig workers seek. Our approach ensures your IT
+                projects are powered by experts while you maintain the agility
+                and efficiency to innovate and adapt.
+              </p>
+              <div class="section-content-1">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Cost-Effective Solutions
+              </div>
+              <p class="section-content-p">
+                We understand that cost-effectiveness is paramount in the IT
+                industry. MatrixOne is dedicated to providing solutions that
+                help you optimize your IT investments. Our extensive partner
+                network enables us to offer competitive pricing without
+                compromising on the highest quality standards.
+              </p>
+              <div class="section-content-1">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Global Reach
+              </div>
+              <p class="section-content-p">
+                Our commitment goes beyond geographical boundaries. MatrixOne
+                caters to clients across the globe, meeting global standards and
+                ensuring that your IT needs are met with precision, reliability,
+                and innovation. Our services transcend borders, making us a true
+                global IT solutions provider.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-4 mb-4">
+          <img
+            src="assets/img/section-2-image-1.png"
+            alt="Globe Network"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4 order-lg-2">
+          <h2>Our Journey</h2>
+          <p>
+            With an average experience of more than 15 years, our journey is
+            marked by the dedication of our exceptional team and the collective
+            wisdom of our extensive partner network. Over the years, we have
+            seamlessly integrated our services, evolving into an "Aggregator of
+            IT Organizations." This transformation has been made possible by our
+            commitment to process orientation, ensuring that every project and
+            service we offer adheres to the highest industry standards.
+          </p>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4 order-lg-1">
+          <img
+            src="assets/img/section-2-image-3.png"
+            alt="Network Illustration"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-5">
+        <div class="col-lg-7 col-md-6 mb-4">
+          <h2>Our Partners</h2>
+          <p>
+            With an expansive network of over 300 partners, we bring to the
+            table a wealth of expertise and experience. These partners have
+            successfully delivered over 100 projects, spanning diverse
+            technology stacks and business processes. When you choose MatrixOne,
+            you gain access to a dynamic pool of resources, each committed to
+            meeting your unique IT requirements. We are part of NASSCOM,
+            underlining our commitment to adhering to global standards and best
+            practices.
+          </p>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4">
+          <img
+            src="assets/img/section-2-image-2.png"
+            alt="Globe Network"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="row mt-5 align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4 order-lg-2">
+          <h2>Our Services</h2>
+          <p>
+            MatrixOne offers a comprehensive portfolio of services, including
+            product sales, project sales, bench sales, IT Service Management &
+            Project Management Office services. Our project sales service
+            leverages the experience of our partners, who have a proven track
+            record of delivering projects that drive success. Additionally, our
+            bench sales service introduces the concept of 'Uberization' to the
+            IT industry, providing you with a flexible and scalable workforce
+            that meets the evolving demands of your business. Additionally our
+            Service management & PMO services lead your organization towards a
+            more compliant and process oriented organization.
+          </p>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4 order-lg-1">
+          <img
+            src="assets/img/section-2-image-4.png"
+            alt="Network Illustration"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <center><h2>Our Partners</h2></center>
+    </div>
+    <div class="logo-slider mt-5">
+      <div class="logo-slide-track">
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+        </div>
+
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+        </div>
+        <div class="logo-slide">
+          <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center mt-5">Our Team</h2>
+    <div class="container team-section">
+      <div class="row mt-5">
+        <div class="col-lg-3 col-md-6 col-sm-12 team-member">
+          <img
+            src="assets/img/about-test-1 (1).png"
+            alt="Mr Manoj Thadani"
+            class="img-fluid"
+          />
+          <h3 class="team-heading">Mr Manoj Thadani</h3>
+          <p class="team-para-1">Managing Director</p>
+          <p class="team-para-1">
+            Delivering Expertise and Innovation. Focused on Relationship
+            Cultivation, Growth Strategies and Operational Excellence for
+            Sustainable Prosperity
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 team-member">
+          <img
+            src="assets/img/about-test-1 (2).png"
+            alt="Mr Manu Chander M"
+            class="img-fluid"
+          />
+          <h3 class="team-heading">Mr Manu Chander M</h3>
+          <p class="team-para-1">Advisory Team Member</p>
+          <p class="team-para-1">
+            Experience in Orchestrating large scale integrations, implementing
+            DevOps & establishing Offshore Development centers for enterprises
+            and startups
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 team-member">
+          <img
+            src="assets/img/about-test-1 (3).png"
+            alt="Mr Rajesh Mahindrakar"
+            class="img-fluid"
+          />
+          <h3 class="team-heading">Mr Rajesh Mahindrakar</h3>
+          <p class="team-para-1">Advisory Team Member</p>
+          <p class="team-para-1">
+            Expert in Program and Project Management, orchestrating the
+            successful delivery of Managed Services projects and nurturing
+            strong client relationships.
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 team-member">
+          <img
+            src="assets/img/about-test-1 (4).png"
+            alt="Mr Vijay Chander"
+            class="img-fluid"
+          />
+          <h3 class="team-heading">Mr Vijay Chander</h3>
+          <p class="team-para-1">PMO Advisor to MatrixOne</p>
+          <p class="team-para-1">
+            Specializing in Process & Product Development, Automation, ERP and
+            Operating Systems. Process & Product Development, ISO, ITSM, AI &
+            Automation, IOT, Blockchain, PMO and Management Consulting
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-section">
+      <div class="container">
+        <h2 class="text-center mt-5">Our Client Testimonials</h2>
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#testimonialCarousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+            <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-item d-flex align-items-center">
+                <div class="testimonial-logo mr-3">
+                  Replace with the path to your image
+                  <img
+                    src="assets/img/k-tree.png"
+                    alt="KTree Web Engineering Logo"
+                    class="img-fluid"
+                  />
+                </div>
+                <div class="testimonial-content">
+                  <p class="testimonial-quote">“</p>
+                  <h3>Great Work!</h3>
+                  <p>
+                    Working with [Company Name] has been a seamless and
+                    enriching experience. Their dedication to delivering
+                    top-notch services and solutions has consistently
+                    contributed to the advancement of our projects...
+                  </p>
+                  <footer class="blockquote-footer">
+                    KTree Web Engineers, Director
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    Adjust the src attribute to the path of your image
+                    <img
+                      src="assets/img/k-tree.png"
+                      class="testimonial-image"
+                      alt="KTree Web Engineering"
+                    />
+                    <p class="text-center">Ktree Web Engineers<br />Director</p>
+                  </div>
+                  <div class="col-md-8">
+                    <blockquote class="blockquote">
+                      <p class="testimonial-heading">Great Work!</p>
+                      <p class="testimonial-text">
+                        Working with MatrixOne Tech Solutions has been a
+                        seamless and enriching experience. Matrix One dedication
+                        to delivering top-notch services and solutions has
+                        remarkably contributed to the enhancement of our
+                        projects.<br />MatrixOne’s unwavering commitment to
+                        quality, innovation, and professionalism has been a
+                        vital asset. They have time and again shown a profound
+                        understanding of technology trends, ensuring that we are
+                        always ahead in the competitive landscape
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+
+                Content for slide 3 Repeat the format from slide 1 with
+                different content and image
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-item">
+                <div class="row">
+                  <div class="col-md-4">
+                    Adjust the src attribute to the path of your image
+                    <img
+                      src="assets/img/k-tree.png"
+                      class="testimonial-image"
+                      alt="KTree Web Engineering"
+                    />
+                    <p class="text-center">Ktree Web Engineers<br />Director</p>
+                  </div>
+                  <div class="col-md-8">
+                    <blockquote class="blockquote">
+                      <p class="testimonial-heading">Great Work!</p>
+                      <p class="testimonial-text">
+                        Working with MatrixOne Tech Solutions has been a
+                        seamless and enriching experience. Matrix One dedication
+                        to delivering top-notch services and solutions has
+                        remarkably contributed to the enhancement of our
+                        projects.<br />MatrixOne’s unwavering commitment to
+                        quality, innovation, and professionalism has been a
+                        vital asset. They have time and again shown a profound
+                        understanding of technology trends, ensuring that we are
+                        always ahead in the competitive landscape
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+
+                Content for slide 3 Repeat the format from slide 1 with
+                different content and image
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#testimonialCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class=""
+              ><img src="assets/img/prev.png" alt="" srcset=""
+            /></span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#testimonialCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class=""
+              ><img src="assets/img/next.png" alt="" srcset=""
+            /></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p class="social-media-icons">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <p class="footer-item">About us</p>
+            <p class="footer-item">Services</p>
+            <p class="footer-item">Hire From us</p>
+            <p class="footer-item">Resources</p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">Support</h5>
+            <p class="footer-item">Help</p>
+            <p class="footer-item">Terms and Conditions</p>
+            <p class="footer-item">Privacy Policy</p>
+            <p class="footer-item">Returns and Policy</p>
+            <p class="footer-item">Partners</p>
+          </div>
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    Bootstrap JS and dependencies
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

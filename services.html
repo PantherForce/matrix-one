@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IT Aggregator</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* Add your background image and additional styles here */
+      .hero-section {
+        background: url("assets/img/main.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh; /* Adjust height as needed */
+      }
+
+      /* Ensures the text stands out over the background */
+
+      .hero-section h1 {
+        font-size: 2.5rem; /* Adjust font size as needed */
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b; /* Adjust button color as needed */
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 20px; /* Rounded edges for button */
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a; /* Slightly darker on hover */
+      }
+
+      .overlay {
+        /* Black background with opacity */
+        display: none;
+      }
+      /* Adjust the navigation style as needed */
+
+      /* This is for the button on the navbar with distinct styling */
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .logo-slider {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 1);
+      }
+
+      .logo-slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+      }
+
+      .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20%;
+        height: 150px; /* Adjust height to fit logos */
+      }
+
+      .logo-slide img {
+        max-height: 100px; /* Adjust to your logo size */
+        max-width: 100%; /* Keeps the aspect ratio of logos */
+        object-fit: contain;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-20% * 5));
+        } /* 5 logos, each with 20% width */
+      }
+
+      /* If you have more than 5 logos, you need to copy them to fill the animation loop */
+      .logo-slide:nth-child(6) {
+        order: 1;
+      }
+      .logo-slide:nth-child(7) {
+        order: 2;
+      }
+      .logo-slide:nth-child(8) {
+        order: 3;
+      }
+      .logo-slide:nth-child(9) {
+        order: 4;
+      }
+      .logo-slide:nth-child(10) {
+        order: 5;
+      }
+
+      /* Pause the animation on hover */
+
+      .card-img-top {
+        height: 160px; /* Fixed height for demo purposes, adjust as needed */
+        object-fit: cover;
+      }
+      .card-share-icon {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      .read-more {
+        color: #c31e32;
+        text-decoration: none;
+      }
+
+      .custom-btn {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 10px;
+        width: 12em;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff; /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding: 180px 0;
+      }
+
+      .footer-title {
+        color: #fff; /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        font-size: 24px; /* Adjust size as needed */
+        color: #fff; /* Adjust color as needed */
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff; /* Adjust the button text color as needed */
+        background-color: #f00; /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff; /* Adjust on hover */
+        background-color: #c00; /* Darken the background on hover */
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          background: url("assets/img/hero-mobile.png") center center;
+          background-size: cover;
+          color: white;
+          text-align: center;
+          height: 60vh; /* Adjust height as needed */
+        }
+
+        .overlay {
+          /* Black background with opacity */
+          height: 100%;
+          display: flex;
+          font-size: 3em;
+          align-items: center;
+          font-weight: bold;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .logo-slide img {
+          padding: 4px;
+
+          /* Adjust the max-height for small devices */
+        }
+        .custom-section {
+          padding: 15px 0; /* Less padding on small screens */
+        }
+        .custom-footer {
+          display: block;
+          background-color: rgba(1, 33, 105, 1);
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+          height: 67em;
+        }
+
+        .footer-text {
+          color: white; /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff; /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px; /* Adjust size as needed */
+          color: #fff; /* Adjust color as needed */
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff; /* Adjust the button text color as needed */
+          background-color: #f00; /* Adjust the button background color as needed */
+        }
+
+        .btn-newsletter:hover {
+          color: #fff; /* Adjust on hover */
+          background-color: #c00; /* Darken the background on hover */
+        }
+      }
+
+      /* Center content vertically and horizontally */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Resource 1</a>
+              <a class="dropdown-item" href="#">Resource 2</a>
+              <a class="dropdown-item" href="#">Resource 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Partners
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Partner 1</a>
+              <a class="dropdown-item" href="#">Partner 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Service 1</a>
+              <a class="dropdown-item" href="#">Service 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Our Team</a>
+              <a class="dropdown-item" href="#">Our History</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay">Managed Project Services</div>
+    </section>
+
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4">
+          <p>
+            Engaging the services of a System Integrator (SI) in India presents
+            a financially astute and streamlined approach to enterprises seeking
+            to harness technology and specialized knowledge. It's imperative you
+            consider the meticulous selection of the right System Integrator
+            represents a pivotal choice that wields substantial influence over
+            the triumphant execution of your project.
+          </p>
+          <p>
+            MatrixOne Tech Solutions, serving as a Conductor of System
+            Integrators, possesses access to a consortium of esteemed OEM
+            partners, each equipped with requisite certifications and endowed
+            with extensive proficiencies and know-how to ensure the prompt,
+            high-quality delivery of diverse projects.
+          </p>
+
+          <a href="#" class="custom-btn">Let's Connect</a>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4">
+          <img
+            src="assets/img/section-two.png"
+            alt="Globe Network"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4 order-lg-2">
+          <p>
+            Through a robust network of System Integrator Partners across
+            diverse technologies and scenarios, our organization has
+            consistently delivered exceptional Managed Project Services for our
+            clients. Spanning various industries and technological landscapes,
+            our collaborative approach with these partners has resulted in
+            numerous successful project deliveries.
+          </p>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4 order-lg-1">
+          <img
+            src="assets/img/section-three.png"
+            alt="Network Illustration"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
+      <div class="logo-slider">
+        <div class="logo-slide-track">
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p class="social-media-icons">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <p class="footer-item">About us</p>
+            <p class="footer-item">Services</p>
+            <p class="footer-item">Hire From us</p>
+            <p class="footer-item">Resources</p>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">Support</h5>
+            <p class="footer-item">Help</p>
+            <p class="footer-item">Terms and Conditions</p>
+            <p class="footer-item">Privacy Policy</p>
+            <p class="footer-item">Returns and Policy</p>
+            <p class="footer-item">Partners</p>
+          </div>
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

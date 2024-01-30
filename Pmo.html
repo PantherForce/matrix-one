@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Challenge and Benefits</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .header-background {
+        background-image: url("assets/img/pmo-hero.png");
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .btn-section {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px 30px;
+        color: white;
+      }
+
+      .btn-section-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .section-two-title {
+        color: rgba(7, 8, 94, 1);
+      }
+
+      .section-title {
+        color: rgba(7, 8, 94, 1);
+        margin-bottom: 20px;
+        margin-top: 1.6em;
+      }
+
+      .section-title-1 {
+        color: rgba(7, 8, 94, 1);
+        font-weight: bold;
+        margin-bottom: 0.4em;
+      }
+
+      .section-title-3 {
+        color: rgba(7, 8, 94, 1);
+        font-weight: bold;
+        margin-bottom: 0.8em;
+        font-size: 1.4em;
+      }
+
+      .section-title-2 {
+        color: rgba(7, 8, 94, 1);
+        margin-bottom: 20px;
+        margin-top: 1.6em;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .section-content {
+        margin-bottom: 10px;
+        margin-top: 1.2em;
+      }
+
+      .section-content-1 {
+        font-size: 16px;
+        width: 26em;
+        margin-top: 0.6em;
+      }
+
+      .section-content-2 {
+        font-size: 14px;
+        width: 26em;
+        margin-top: 0.6em;
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .section-key {
+        background-color: rgba(248, 250, 255, 1);
+        height: 90vh;
+      }
+      .logo-slider {
+        display: flex;
+        overflow: hidden;
+        background-color: rgba(240, 240, 240, 1);
+      }
+
+      .logo-slide-track {
+        display: flex;
+        animation: scroll 40s linear infinite;
+      }
+
+      .logo-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 20%;
+        height: 150px;
+      }
+
+      .logo-slide img {
+        max-height: 100px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      .wrap-both {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-20% * 5));
+        }
+      }
+
+      /* If you have more than 5 logos, you need to copy them to fill the animation loop */
+      .logo-slide:nth-child(6) {
+        order: 1;
+      }
+      .logo-slide:nth-child(7) {
+        order: 2;
+      }
+      .logo-slide:nth-child(8) {
+        order: 3;
+      }
+      .logo-slide:nth-child(9) {
+        order: 4;
+      }
+      .logo-slide:nth-child(10) {
+        order: 5;
+      }
+
+      @media (min-width: 992px) {
+        .section-title {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-content-1 {
+          font-size: 16px;
+          width: 20em;
+          margin-top: 0.6em;
+        }
+
+        .section-content-2 {
+          font-size: 14px;
+          width: 26em;
+          margin-top: 1em;
+          margin-bottom: 1.4em;
+        }
+
+        .section-key {
+          background-color: rgba(248, 250, 255, 1);
+          height: auto;
+        }
+
+        .logo-slide img {
+          padding: 8px;
+          margin-bottom: 4em;
+
+          /* Adjust the max-height for small devices */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Resource 1</a>
+              <a class="dropdown-item" href="#">Resource 2</a>
+              <a class="dropdown-item" href="#">Resource 3</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Partners
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Partner 1</a>
+              <a class="dropdown-item" href="#">Partner 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Service 1</a>
+              <a class="dropdown-item" href="#">Service 2</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#">Our Team</a>
+              <a class="dropdown-item" href="#">Our History</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-background"></div>
+
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-7 col-md-6 mb-4">
+          <h3 class="section-two-title">
+            MatrixOne IT PMO Services : Maximizing Organizational Efficiency
+          </h3>
+          <p>
+            In an increasingly dynamic business landscape, where adaptability
+            and streamlined operations reign supreme, the role of IT Project
+            Management Offices (PMOs) has evolved into a cornerstone of success
+            for modern enterprises. At the intersection of strategic planning,
+            execution, and technology, IT PMOs offer a structured approach that
+            organizations leverage to drive project success, enhance operational
+            efficiency, and achieve transformative outcomes.
+          </p>
+        </div>
+
+        <div class="col-lg-5 col-md-4 mb-4">
+          <img
+            src="assets/img/section-2-img.png"
+            alt="Globe Network"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="section-key">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="section-title">Business Challenge</h2>
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Program Charter, Roadmap, Strategy, Budgets,
+            </div>
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Standardized Project Management Practices
+            </div>
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Portfolio Management
+            </div>
+
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Change Management
+            </div>
+
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Governance & Oversight
+            </div>
+
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Program Risk Management
+            </div>
+
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Cost & Resource Management
+            </div>
+
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Training & Development
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="section-title">Business Benefits</h2>
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Project Documentation
+            </div>
+
+            <div class="section-content">
+              <span class="checkmark"
+                ><img
+                  src="assets/img/carbon_checkmark-filled.svg"
+                  alt=""
+                  srcset=""
+              /></span>
+              Maintain Project Management Software
+              <div class="section-content">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Managing & tracking risks
+              </div>
+              <div class="section-content">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Preparation of weekly / monthly status reports
+              </div>
+              <div class="section-content">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Tracking project metrics and KPI’s
+              </div>
+              <div class="section-content">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Customer tailored project methodologies
+              </div>
+              <div class="section-content">
+                <span class="checkmark"
+                  ><img
+                    src="assets/img/carbon_checkmark-filled.svg"
+                    alt=""
+                    srcset=""
+                /></span>
+                Reporting & Analysis
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-section-div">
+          <button class="btn-section">Lets connect</button>
+        </div>
+      </div>
+    </div>
+    <section class="about-us-section py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="section-title-1">Why MatrixOne - IT PMO Services</h3>
+            <p>
+              Our Project Management consulting provides strategy and direction
+              by using our toolkit, which helps in executing of your projects,
+              making you CMMI compliant, and choose from a variety of
+              implementation methodologies including Agile right from planning
+              to execution stages. We can setup a demo for you to understand our
+              process better.
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="section-title-3">Our Value Proposition</h3>
+                <div class="section-content-1">
+                  <span class="checkmark"
+                    ><img
+                      src="assets/img/carbon_checkmark-filled.svg"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Adaptable & Flexible on-prem and cloud projects
+                </div>
+                <div class="section-content-1">
+                  <span class="checkmark"
+                    ><img
+                      src="assets/img/carbon_checkmark-filled.svg"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Ready to use Lifecycle templates
+                </div>
+                <div class="section-content-1">
+                  <span class="checkmark"
+                    ><img
+                      src="assets/img/carbon_checkmark-filled.svg"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Conversant with Marketplace PM tools
+                </div>
+
+                <div class="section-content-1">
+                  <span class="checkmark"
+                    ><img
+                      src="assets/img/carbon_checkmark-filled.svg"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Assist implement OKR & Balance Scorecard tool
+                </div>
+
+                <div class="section-content-1">
+                  <span class="checkmark"
+                    ><img
+                      src="assets/img/carbon_checkmark-filled.svg"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Able PMO Partner in Digital Transformation to
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-7">
+                <div class="section-content-2">
+                  <span class="checkmark"
+                    ><img
+                      width="24px"
+                      src="assets/img/check-circle.png"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Program Charter, Roadmap, Strategy, Budgets,
+                </div>
+                <div class="section-content-2">
+                  <span class="checkmark"
+                    ><img
+                      width="24px"
+                      src="assets/img/check-circle.png"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Standardized Project Management Practices
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="section-content-2">
+                  <span class="checkmark"
+                    ><img
+                      width="24px"
+                      src="assets/img/check-circle.png"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Governance & Oversight
+                </div>
+                <div class="section-content-2">
+                  <span class="checkmark"
+                    ><img
+                      width="24px"
+                      src="assets/img/check-circle.png"
+                      alt=""
+                      srcset=""
+                  /></span>
+                  Portfolio Management
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <img
+              src="assets/img/section-last-img.png"
+              class="img-fluid"
+              alt="Responsive image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <center>
+        <h2 class="section-title">Our Partners</h2>
+      </center>
+    </div>
+    <div class="mt-5">
+      <div class="logo-slider">
+        <div class="logo-slide-track">
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo1.png" alt="Logo 1" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo2.png" alt="Logo 2" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo3.png" alt="Logo 3" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo4.png" alt="Logo 4" />
+          </div>
+          <div class="logo-slide">
+            <img src="assets/img/third-section-logo5.png" alt="Logo 5" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    Include Bootstrap JS and its dependencies
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
