@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Business Challenge and Benefits</title>
+    <title>PMO Solution</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -156,6 +156,48 @@
         order: 5;
       }
 
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff; /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding-top: 7em;
+      }
+
+      .footer-title {
+        color: #fff; /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        font-size: 24px; /* Adjust size as needed */
+        color: #fff; /* Adjust color as needed */
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff; /* Adjust the button text color as needed */
+        background-color: #f00; /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff; /* Adjust on hover */
+        background-color: #c00; /* Darken the background on hover */
+      }
+
       @media (min-width: 992px) {
         .section-title {
           margin-bottom: 0;
@@ -187,6 +229,55 @@
 
           /* Adjust the max-height for small devices */
         }
+
+        .custom-footer {
+          display: block;
+          background-color: rgba(1, 33, 105, 1);
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+        }
+
+        .footer-text {
+          color: white; /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff; /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px;
+          color: #fff;
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff;
+          background-color: #f00;
+        }
+
+        .btn-newsletter:hover {
+          color: #fff;
+          background-color: #c00;
+        }
       }
     </style>
   </head>
@@ -212,11 +303,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="index.html">Home </a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -230,9 +319,12 @@
               Resources
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Resource 1</a>
-              <a class="dropdown-item" href="#">Resource 2</a>
-              <a class="dropdown-item" href="#">Resource 3</a>
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Pmo.html">PMO-Solution</a>
+              <a class="dropdown-item" href="aws.html">Case studies</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -263,25 +355,12 @@
               Services
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Service 1</a>
-              <a class="dropdown-item" href="#">Service 2</a>
+              <a class="dropdown-item" href="IT services.html">IT-Service</a>
+              <a class="dropdown-item" href="services.html">Managed-Service</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              About Us
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Our Team</a>
-              <a class="dropdown-item" href="#">Our History</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="About-us.html">About us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact us</a>
@@ -604,7 +683,7 @@
         <h2 class="section-title">Our Partners</h2>
       </center>
     </div>
-    <div class="mt-5">
+    <div class="mt-5 mb-5">
       <div class="logo-slider">
         <div class="logo-slide-track">
           <div class="logo-slide">
@@ -642,7 +721,67 @@
       </div>
     </div>
 
-    Include Bootstrap JS and its dependencies
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p class="social-media-icons">
+                <i class="fab fa-linkedin-in"></i> LinkedIn
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <ul>
+              <li>
+                <a href="#" class="footer-item">About us</a>
+              </li>
+              <li><a href="#" class="footer-item">Services</a></li>
+              <li><a href="#" class="footer-item">Hire From us</a></li>
+              <li><a href="#" class="footer-item">Resources</a></li>
+            </ul>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">Support</h5>
+            <ul>
+              <li><a href="#" class="footer-item">Help</a></li>
+              <li><a href="#" class="footer-item">Terms and Conditions</a></li>
+              <li><a href="#" class="footer-item">Privacy Policy</a></li>
+              <li><a href="#" class="footer-item">Returns and Policy</a></li>
+              <li><a href="#" class="footer-item">Partners</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

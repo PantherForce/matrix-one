@@ -3,25 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT Aggregator</title>
-    <!-- Bootstrap CSS -->
+    <title>Homepage</title>
+
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <style>
-      /* Add your background image and additional styles here */
       .hero-section {
         background: url("assets/img/homepage-banner.png") center center;
         background-size: cover;
         color: white;
         text-align: center;
-        height: 60vh; /* Adjust height as needed */
+        height: 60vh;
       }
 
-      /* Ensures the text stands out over the background */
       .overlay {
-        /* Black background with opacity */
         height: 100%;
         display: flex;
         align-items: center;
@@ -31,25 +28,24 @@
       }
 
       .hero-section h1 {
-        font-size: 1.8rem; /* Adjust font size as needed */
+        font-size: 1.8rem;
         margin-bottom: 1rem;
       }
 
       .hero-section .btn {
-        background-color: #ff4b2b; /* Adjust button color as needed */
+        background-color: #ff4b2b;
         border: none;
         padding: 0.6rem 2rem;
-        border-radius: 20px; /* Rounded edges for button */
+        border-radius: 20px;
         color: white;
         font-size: 1rem;
         text-transform: uppercase;
       }
 
       .hero-section .btn:hover {
-        background-color: #ff3a1a; /* Slightly darker on hover */
+        background-color: #ff3a1a;
       }
 
-      /* Adjust the navigation style as needed */
       .btn-nav {
         border-radius: 29px;
         background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
@@ -71,7 +67,6 @@
       .checkmark-list li::before {
         position: absolute;
         left: 0;
-        /* Adjust the color to match your design */
       }
 
       .about-section {
@@ -85,7 +80,6 @@
         padding-right: 1em;
       }
 
-      /* Responsive image on the right */
       .about-image {
         background: url("assets/img/second-section-image.png") no-repeat center;
         background-size: cover;
@@ -115,12 +109,12 @@
         justify-content: center;
         flex-shrink: 0;
         width: 20%;
-        height: 150px; /* Adjust height to fit logos */
+        height: 150px;
       }
 
       .logo-slide img {
-        max-height: 100px; /* Adjust to your logo size */
-        max-width: 100%; /* Keeps the aspect ratio of logos */
+        max-height: 100px;
+        max-width: 100%;
         object-fit: contain;
       }
 
@@ -130,10 +124,9 @@
         }
         100% {
           transform: translateX(calc(-20% * 5));
-        } /* 5 logos, each with 20% width */
+        }
       }
 
-      /* If you have more than 5 logos, you need to copy them to fill the animation loop */
       .logo-slide:nth-child(6) {
         order: 1;
       }
@@ -150,7 +143,6 @@
         order: 5;
       }
 
-      /* Pause the animation on hover */
       .logo-slider:hover .logo-slide-track {
         animation-play-state: paused;
       }
@@ -163,12 +155,11 @@
       }
 
       .service-card:hover {
-        background-color: #07085e; /* Dark blue color */
+        background-color: #07085e;
         color: #ffffff;
       }
 
       .service-card .icon-wrapper {
-        /* Red color for the icon background */
         width: 50px;
         height: 50px;
         gap: 3em;
@@ -180,18 +171,18 @@
       }
 
       .service-card .icon-wrapper img {
-        width: 44px; /* Adjust based on your icon size */
+        width: 44px;
         height: auto;
       }
 
       .icon-wrapper-1 img {
         width: 28px;
-        margin-bottom: 10px; /* Adjust based on your icon size */
+        margin-bottom: 10px;
         height: auto;
       }
 
       .service-card-title {
-        font-size: 1.25rem; /* Adjust title size as needed */
+        font-size: 1.25rem;
         font-weight: bold;
         margin-bottom: 15px;
         text-align: left;
@@ -204,7 +195,6 @@
         text-align: left;
       }
 
-      /* Ensure colors change on hover */
       .service-card:hover .service-card-title,
       .service-card:hover .service-card-text,
       .service-card:hover .icon-wrapper img {
@@ -215,26 +205,23 @@
       .background-image {
         background: url("assets/img/banner-section.png");
         background-size: cover;
-        height: 50vh; /* Set the background height to cover the viewport height */
+        height: 50vh;
       }
 
-      /* Center content vertically and horizontally */
       .content-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%; /* Ensure the container takes the full height of the background */
-        color: #ffffff; /* Text color on the background */
+        height: 100%;
+        color: #ffffff;
       }
 
-      /* Style for your heading */
       .custom-heading {
         font-size: 2.4rem;
         margin-bottom: 20px;
       }
 
-      /* Style for your paragraph */
       .custom-paragraph {
         font-size: 1.2rem;
         text-align: center;
@@ -255,22 +242,19 @@
           transform: translateX(0);
         }
         100% {
-          transform: translateX(
-            calc(-250px * 4)
-          ); /* Assuming card width+margin is 250px */
+          transform: translateX(calc(-250px * 4));
         }
       }
       .center-cont {
         margin-bottom: 4em;
       }
       .ard {
-        min-width: 280px; /* Set the card width */
-        margin-right: 15px; /* Space between cards */
+        min-width: 280px;
+        margin-right: 15px;
         margin-top: 24px;
         gap: 16em;
       }
 
-      /* This is to create an infinite effect by cloning the cards */
       .moving-ards::after {
         content: "";
         position: absolute;
@@ -286,32 +270,31 @@
       }
 
       .contact-section {
-        background-color: #f8f9fa; /* Adjust the background color as needed */
+        background-color: #f8f9fa;
         padding: 40px 0;
       }
 
       .contact-form {
-        background-color: #ffffff; /* White background for the form */
+        background-color: #ffffff;
         padding: 30px;
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
       .contact-form .btn {
-        background-color: #ff0000; /* Red color for the SEND button */
+        background-color: #ff0000;
         color: #ffffff;
         border: none;
       }
 
       .contact-form .btn:hover {
-        background-color: darken(#ff0000, 10%); /* Slightly darker on hover */
+        background-color: darken(#ff0000, 10%);
       }
 
       .contact-info {
         display: flex;
         flex-direction: row;
-        /* Dark blue for the info section */
-        color: black; /* White text color */
+        color: black;
         gap: 10px;
         border-radius: 8px;
       }
@@ -336,10 +319,9 @@
       }
 
       .contact-info .info-item img {
-        margin-right: 10px; /* Space between icon and text */
+        margin-right: 10px;
       }
 
-      /* Adjust this path to where your image is stored */
       .contact-image {
         background: url("assets/img/form-side-image.png") no-repeat center
           center;
@@ -396,15 +378,15 @@
       }
 
       .footer-text {
-        color: #fff; /* Adjust the color to match your design */
+        color: #fff;
       }
 
       .footer-section {
-        padding: 180px 0;
+        padding-top: 7em;
       }
 
       .footer-title {
-        color: #fff; /* Adjust the color to match your design */
+        color: #fff;
         margin-bottom: 20px;
       }
 
@@ -414,8 +396,8 @@
       }
 
       .social-media-icons {
-        font-size: 24px; /* Adjust size as needed */
-        color: #fff; /* Adjust color as needed */
+        font-size: 24px;
+        color: #fff;
       }
 
       .newsletter-subscription {
@@ -423,13 +405,13 @@
       }
 
       .btn-newsletter {
-        color: #fff; /* Adjust the button text color as needed */
-        background-color: #f00; /* Adjust the button background color as needed */
+        color: #fff;
+        background-color: #f00;
       }
 
       .btn-newsletter:hover {
-        color: #fff; /* Adjust on hover */
-        background-color: #c00; /* Darken the background on hover */
+        color: #fff;
+        background-color: #c00;
       }
 
       @media (max-width: 768px) {
@@ -437,7 +419,7 @@
           text-align: center;
         }
         .hero-section h1 {
-          font-size: 1rem; /* Adjust font size as needed */
+          font-size: 1rem;
           margin-bottom: 1rem;
           text-align: center;
         }
@@ -468,7 +450,7 @@
         }
 
         .footer-text {
-          color: white; /* Adjust the color to match your design */
+          color: white;
         }
 
         .footer-section {
@@ -476,7 +458,7 @@
         }
 
         .footer-title {
-          color: #fff; /* Adjust the color to match your design */
+          color: #fff;
           margin-bottom: 20px;
           font-size: 1em;
         }
@@ -487,8 +469,8 @@
         }
 
         .social-media-icons {
-          font-size: 24px; /* Adjust size as needed */
-          color: #fff; /* Adjust color as needed */
+          font-size: 24px;
+          color: #fff;
         }
 
         .newsletter-subscription {
@@ -496,13 +478,13 @@
         }
 
         .btn-newsletter {
-          color: #fff; /* Adjust the button text color as needed */
-          background-color: #f00; /* Adjust the button background color as needed */
+          color: #fff;
+          background-color: #f00;
         }
 
         .btn-newsletter:hover {
-          color: #fff; /* Adjust on hover */
-          background-color: #c00; /* Darken the background on hover */
+          color: #fff;
+          background-color: #c00;
         }
       }
     </style>
@@ -530,7 +512,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ml-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#"
               >Home <span class="sr-only">(current)</span></a
@@ -553,7 +535,7 @@
                 >Success Stories</a
               >
               <a class="dropdown-item" href="Pmo.html">PMO-Solution</a>
-              <a class="dropdown-item" href="aws.html">AWS</a>
+              <a class="dropdown-item" href="aws.html">Case studies</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -1242,18 +1224,24 @@
           </div>
           <div class="col-md-2">
             <h5 class="footer-title">QUICK LINKS</h5>
-            <p class="footer-item">About us</p>
-            <p class="footer-item">Services</p>
-            <p class="footer-item">Hire From us</p>
-            <p class="footer-item">Resources</p>
+            <ul>
+              <li>
+                <a href="#" class="footer-item">About us</a>
+              </li>
+              <li><a href="#" class="footer-item">Services</a></li>
+              <li><a href="#" class="footer-item">Hire From us</a></li>
+              <li><a href="#" class="footer-item">Resources</a></li>
+            </ul>
           </div>
           <div class="col-md-2">
             <h5 class="footer-title">Support</h5>
-            <p class="footer-item">Help</p>
-            <p class="footer-item">Terms and Conditions</p>
-            <p class="footer-item">Privacy Policy</p>
-            <p class="footer-item">Returns and Policy</p>
-            <p class="footer-item">Partners</p>
+            <ul>
+              <li><a href="#" class="footer-item">Help</a></li>
+              <li><a href="#" class="footer-item">Terms and Conditions</a></li>
+              <li><a href="#" class="footer-item">Privacy Policy</a></li>
+              <li><a href="#" class="footer-item">Returns and Policy</a></li>
+              <li><a href="#" class="footer-item">Partners</a></li>
+            </ul>
           </div>
           <div class="col-md-4 newsletter-subscription">
             <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>

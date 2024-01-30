@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IT Aggregator</title>
+    <title>About-us</title>
 
     <link
       rel="stylesheet"
@@ -252,7 +252,7 @@
       }
 
       .footer-section {
-        padding: 180px 0;
+        padding-top: 7em;
       }
 
       .footer-title {
@@ -414,11 +414,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
+            <a class="nav-link" href="index.html">Home </a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -432,9 +430,12 @@
               Resources
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Resource 1</a>
-              <a class="dropdown-item" href="#">Resource 2</a>
-              <a class="dropdown-item" href="#">Resource 3</a>
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Pmo.html">PMO-Solution</a>
+              <a class="dropdown-item" href="aws.html">AWS</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -465,25 +466,14 @@
               Services
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Service 1</a>
-              <a class="dropdown-item" href="#">Service 2</a>
+              <a class="dropdown-item" href="IT services.html">IT-Service</a>
+              <a class="dropdown-item" href="services.html"
+                >Managed-Service <span class="sr-only">(current)</span>
+              </a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              About Us
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Our Team</a>
-              <a class="dropdown-item" href="#">Our History</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="About-us.html">About us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact us</a>
@@ -764,7 +754,6 @@
             <div class="carousel-item active">
               <div class="testimonial-item d-flex align-items-center">
                 <div class="testimonial-logo mr-3">
-                  Replace with the path to your image
                   <img
                     src="assets/img/k-tree.png"
                     alt="KTree Web Engineering Logo"
@@ -790,7 +779,6 @@
               <div class="testimonial-item">
                 <div class="row">
                   <div class="col-md-4">
-                    Adjust the src attribute to the path of your image
                     <img
                       src="assets/img/k-tree.png"
                       class="testimonial-image"
@@ -815,16 +803,12 @@
                     </blockquote>
                   </div>
                 </div>
-
-                Content for slide 3 Repeat the format from slide 1 with
-                different content and image
               </div>
             </div>
             <div class="carousel-item">
               <div class="testimonial-item">
                 <div class="row">
                   <div class="col-md-4">
-                    Adjust the src attribute to the path of your image
                     <img
                       src="assets/img/k-tree.png"
                       class="testimonial-image"
@@ -849,9 +833,6 @@
                     </blockquote>
                   </div>
                 </div>
-
-                Content for slide 3 Repeat the format from slide 1 with
-                different content and image
               </div>
             </div>
           </div>
@@ -900,18 +881,24 @@
           </div>
           <div class="col-md-2">
             <h5 class="footer-title">QUICK LINKS</h5>
-            <p class="footer-item">About us</p>
-            <p class="footer-item">Services</p>
-            <p class="footer-item">Hire From us</p>
-            <p class="footer-item">Resources</p>
+            <ul>
+              <li>
+                <a href="#" class="footer-item">About us</a>
+              </li>
+              <li><a href="#" class="footer-item">Services</a></li>
+              <li><a href="#" class="footer-item">Hire From us</a></li>
+              <li><a href="#" class="footer-item">Resources</a></li>
+            </ul>
           </div>
           <div class="col-md-2">
             <h5 class="footer-title">Support</h5>
-            <p class="footer-item">Help</p>
-            <p class="footer-item">Terms and Conditions</p>
-            <p class="footer-item">Privacy Policy</p>
-            <p class="footer-item">Returns and Policy</p>
-            <p class="footer-item">Partners</p>
+            <ul>
+              <li><a href="#" class="footer-item">Help</a></li>
+              <li><a href="#" class="footer-item">Terms and Conditions</a></li>
+              <li><a href="#" class="footer-item">Privacy Policy</a></li>
+              <li><a href="#" class="footer-item">Returns and Policy</a></li>
+              <li><a href="#" class="footer-item">Partners</a></li>
+            </ul>
           </div>
           <div class="col-md-4 newsletter-subscription">
             <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
@@ -936,7 +923,7 @@
         </div>
       </div>
     </footer>
-    Bootstrap JS and dependencies
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
