@@ -328,8 +328,19 @@
       }
 
       .form-select {
-        width: 14em;
-        height: 2.4em;
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       }
 
       .about-head1 {
@@ -472,12 +483,22 @@
         .carousel-item .d-flex {
           flex-direction: column;
         }
-
+        .logo-slide img {
+          padding: 6px;
+        }
         .wave-shape {
           background: url("assets/img/footer-img.png") no-repeat top;
           background-size: cover;
           padding-top: 16em;
           height: 67em;
+        }
+
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          color: black;
+          gap: 10px;
+          border-radius: 8px;
         }
 
         .footer-text {
@@ -565,8 +586,8 @@
               <a class="dropdown-item" href="Sucess-stories.html"
                 >Success Stories</a
               >
-              <a class="dropdown-item" href="PMO-solution.html">PMO-Solution</a>
-              <a class="dropdown-item" href="Case-studies.html">Case studies</a>
+              <a class="dropdown-item" href="#">fresh opportunities</a>
+              <a class="dropdown-item" href="#">Current bench</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -578,31 +599,20 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Partners
+              Bench sales
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Partner 1</a>
-              <a class="dropdown-item" href="#">Partner 2</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Services
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="IT services.html">IT-Service</a>
-              <a class="dropdown-item" href="Manage-services.html"
-                >Managed-Service</a
+              <a class="dropdown-item" href="IT services.html"
+                >IT Managed product</a
               >
+              <a class="dropdown-item" href="#">Prooduct sale</a>
+              <a class="dropdown-item" href="Manage-services.html"
+                >Manage-services</a
+              >
+              <a class="dropdown-item" href="PMO-solution.html">PMO</a>
             </div>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="About-us.html">About us</a>
           </li>
@@ -653,6 +663,7 @@
             <ul class="list-unstyled mt-4">
               <li>
                 <img
+                  style="margin: 0.4em"
                   width="20px"
                   src="assets/img/check-circle.png"
                   alt=""
@@ -664,6 +675,7 @@
               <li>
                 <img
                   width="20px"
+                  style="margin: 0.4em"
                   src="assets/img/check-circle.png"
                   alt=""
                   srcset=""
@@ -674,6 +686,7 @@
               <li>
                 <img
                   width="20px"
+                  style="margin: 0.4em"
                   src="assets/img/check-circle.png"
                   alt=""
                   srcset=""
@@ -740,26 +753,10 @@
       <p class="text-center mb-5 text-secondary">Benefits of Working With Us</p>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <div class="col">
-          <div class="card service-card">
-            <div class="card-body service-card-body text-center">
-              <div class="icon-wrapper">
-                <img src="assets\img\card-logo-2.png" alt="Icon 1" />
-              </div>
-              <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
-              <p class="service-card-text">
-                We tailor IT solutions to your specific requirements, whether it
-                is web & mobile, cloud computing, AI, data analytics or other
-                cutting edge technologies.
-              </p>
-            </div>
-          </div>
-        </div>
-
         <div class="card service-card">
           <div class="card-body service-card-body text-center">
             <div class="icon-wrapper">
-              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+              <img src="assets\img/small-icon-1.png" alt="Icon 1" />
             </div>
             <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
             <p class="service-card-text">
@@ -775,11 +772,25 @@
             <div class="icon-wrapper">
               <img src="assets\img\card-logo-2.png" alt="Icon 1" />
             </div>
-            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <h5 class="service-card-title">SECURITY AT THE CORE</h5>
             <p class="service-card-text">
-              We tailor IT solutions to your specific requirements, whether it
-              is web & mobile, cloud computing, AI, data analytics or other
-              cutting edge technologies.
+              Security is paramount in the digital landscape. MatrixOne’s core
+              operations prioritize data security, encryption, and compliance to
+              safeguard your data and IT infrastructure.
+            </p>
+          </div>
+        </div>
+
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img/small-icon-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">UBERIZATION OF WORKFORCE</h5>
+            <p class="service-card-text">
+              We introduce ‘Uberization’ to IT, providing a flexible, scalable
+              workforce for precise access to talents and skills when you need
+              them, ensuring a highly responsive IT workforce.
             </p>
           </div>
         </div>
@@ -789,11 +800,11 @@
             <div class="icon-wrapper">
               <img src="assets\img\card-logo-2.png" alt="Icon 1" />
             </div>
-            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <h5 class="service-card-title">PROCESS ORIENTATION</h5>
             <p class="service-card-text">
-              We tailor IT solutions to your specific requirements, whether it
-              is web & mobile, cloud computing, AI, data analytics or other
-              cutting edge technologies.
+              We prioritize a process-oriented approach to ensure efficient and
+              seamless project execution, enhancing productivity and delivering
+              consistent results.
             </p>
           </div>
         </div>
@@ -802,11 +813,11 @@
             <div class="icon-wrapper">
               <img src="assets\img\card-logo-2.png" alt="Icon 1" />
             </div>
-            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <h5 class="service-card-title">COST-EFFECTIVE SOLUTIONS</h5>
             <p class="service-card-text">
-              We tailor IT solutions to your specific requirements, whether it
-              is web & mobile, cloud computing, AI, data analytics or other
-              cutting edge technologies.
+              MatrixOne is committed to cost-effectiveness, leveraging our
+              partner network to deliver competitive pricing while maintaining
+              the highest quality standards.
             </p>
           </div>
         </div>
@@ -815,11 +826,11 @@
             <div class="icon-wrapper">
               <img src="assets\img\card-logo-2.png" alt="Icon 1" />
             </div>
-            <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
+            <h5 class="service-card-title">QUALITY ASSURANCE</h5>
             <p class="service-card-text">
-              We tailor IT solutions to your specific requirements, whether it
-              is web & mobile, cloud computing, AI, data analytics or other
-              cutting edge technologies.
+              Our rigorous quality assurance process ensures that every service
+              and solution adhere to the highest industry standards, delivering
+              reliable and top-notch services consistently
             </p>
           </div>
         </div>
@@ -837,7 +848,7 @@
           Discover dynamic staffing roles and exciting managed projects
           opportunities waiting for your expertise to make an impact.
         </p>
-        <a href="#" class="btn-connect">connect with us</a>
+        <a href="#" class="btn-connect">Connect with us</a>
         <!-- Add your content here -->
       </div>
     </div>
