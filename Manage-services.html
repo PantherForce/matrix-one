@@ -169,6 +169,8 @@
 
       .footer-section {
         padding-top: 7em;
+        display: flex;
+        justify-content: space-evenly;
       }
 
       .footer-title {
@@ -182,8 +184,11 @@
       }
 
       .social-media-icons {
-        font-size: 24px; /* Adjust size as needed */
-        color: #fff; /* Adjust color as needed */
+        display: flex;
+        flex-direction: row;
+        font-size: 24px;
+        gap: 1em;
+        color: #fff;
       }
 
       .newsletter-subscription {
@@ -206,7 +211,7 @@
 
       @media (max-width: 768px) {
         .hero-section {
-          background: url("assets/img/hero-mobile.png") center center;
+          background: url("assets/img/manage-service-mobile.jpeg") center center;
           background-size: cover;
           color: white;
           text-align: center;
@@ -518,9 +523,16 @@
               </p>
               <p><i class="fas fa-phone"></i> (123) 456-7890</p>
               <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
-              <p class="social-media-icons">
-                <i class="fab fa-linkedin-in"></i> LinkedIn
-              </p>
+              <div>
+                <p class="social-media-icons">
+                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-google-plus"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-instagram"></i>
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-md-2">
@@ -534,22 +546,10 @@
               <li><a href="#" class="footer-item">Resources</a></li>
             </ul>
           </div>
-          <div class="col-md-2">
-            <h5 class="footer-title">Support</h5>
-            <ul>
-              <li><a href="#" class="footer-item">Help</a></li>
-              <li><a href="#" class="footer-item">Terms and Conditions</a></li>
-              <li><a href="#" class="footer-item">Privacy Policy</a></li>
-              <li><a href="#" class="footer-item">Returns and Policy</a></li>
-              <li><a href="#" class="footer-item">Partners</a></li>
-            </ul>
-          </div>
+
           <div class="col-md-4 newsletter-subscription">
             <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
-            <p class="footer-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
+            <p class="footer-text">Connect with us for latest blog</p>
             <div class="input-group mb-3">
               <input
                 type="email"

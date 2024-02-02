@@ -364,7 +364,7 @@
       .contact-image {
         background: url("assets/img/form-side-image.png") no-repeat center
           center;
-        background-size: cover;
+        background-size: contain;
         height: 26em;
       }
       .carousel-indicators li {
@@ -416,6 +416,24 @@
         background-size: cover;
       }
 
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        justify-content: space-around;
+      }
+
+      .social-media-icons {
+        display: flex;
+        flex-direction: row;
+        font-size: 24px;
+        gap: 1em;
+        color: #fff;
+      }
+
       .footer-text {
         color: #fff;
       }
@@ -432,11 +450,6 @@
       .footer-item {
         margin-bottom: 10px;
         color: white;
-      }
-
-      .social-media-icons {
-        font-size: 24px;
-        color: #fff;
       }
 
       .newsletter-subscription {
@@ -490,7 +503,6 @@
           background: url("assets/img/footer-img.png") no-repeat top;
           background-size: cover;
           padding-top: 16em;
-          height: 67em;
         }
 
         .contact-info {
@@ -527,6 +539,7 @@
 
         .newsletter-subscription {
           max-width: 300px;
+          margin-right: 6em;
         }
 
         .btn-newsletter {
@@ -756,7 +769,7 @@
         <div class="card service-card">
           <div class="card-body service-card-body text-center">
             <div class="icon-wrapper">
-              <img src="assets\img/small-icon-1.png" alt="Icon 1" />
+              <img src="assets/img/homepage-logo-small-1.svg" alt="Icon 1" />
             </div>
             <h5 class="service-card-title">TECHNOLOGY AGNOSTIC</h5>
             <p class="service-card-text">
@@ -772,20 +785,6 @@
             <div class="icon-wrapper">
               <img src="assets\img\card-logo-2.png" alt="Icon 1" />
             </div>
-            <h5 class="service-card-title">SECURITY AT THE CORE</h5>
-            <p class="service-card-text">
-              Security is paramount in the digital landscape. MatrixOne’s core
-              operations prioritize data security, encryption, and compliance to
-              safeguard your data and IT infrastructure.
-            </p>
-          </div>
-        </div>
-
-        <div class="card service-card">
-          <div class="card-body service-card-body text-center">
-            <div class="icon-wrapper">
-              <img src="assets\img/small-icon-2.png" alt="Icon 1" />
-            </div>
             <h5 class="service-card-title">UBERIZATION OF WORKFORCE</h5>
             <p class="service-card-text">
               We introduce ‘Uberization’ to IT, providing a flexible, scalable
@@ -798,7 +797,7 @@
         <div class="card service-card">
           <div class="card-body service-card-body text-center">
             <div class="icon-wrapper">
-              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+              <img src="assets/img/homepage-logo-small-3.svg" alt="Icon 1" />
             </div>
             <h5 class="service-card-title">PROCESS ORIENTATION</h5>
             <p class="service-card-text">
@@ -808,10 +807,11 @@
             </p>
           </div>
         </div>
+
         <div class="card service-card">
           <div class="card-body service-card-body text-center">
             <div class="icon-wrapper">
-              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+              <img src="assets/img/homepage-logo-small-4.png" alt="Icon 1" />
             </div>
             <h5 class="service-card-title">COST-EFFECTIVE SOLUTIONS</h5>
             <p class="service-card-text">
@@ -824,13 +824,26 @@
         <div class="card service-card">
           <div class="card-body service-card-body text-center">
             <div class="icon-wrapper">
-              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+              <img src="assets/img/homepage-logo-small-5.svg" alt="Icon 1" />
             </div>
             <h5 class="service-card-title">QUALITY ASSURANCE</h5>
             <p class="service-card-text">
               Our rigorous quality assurance process ensures that every service
               and solution adhere to the highest industry standards, delivering
-              reliable and top-notch services consistently
+              reliable and top-notch services consistently.
+            </p>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="card-body service-card-body text-center">
+            <div class="icon-wrapper">
+              <img src="assets\img\card-logo-2.png" alt="Icon 1" />
+            </div>
+            <h5 class="service-card-title">SECURITY AT THE CORE</h5>
+            <p class="service-card-text">
+              Security is paramount in the digital landscape. MatrixOne’s core
+              operations prioritize data security, encryption, and compliance to
+              safeguard your data and IT infrastructure.
             </p>
           </div>
         </div>
@@ -981,6 +994,7 @@
           ></li>
           <li data-target="#testimonialCarousel" data-slide-to="1"></li>
           <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+          <li data-target="#testimonialCarousel" data-slide-to="3"></li>
           <!-- Add as many indicators as needed -->
         </ol>
         <div class="carousel-inner">
@@ -1177,6 +1191,289 @@
               </div>
             </div>
           </div>
+
+          <div class="carousel-item">
+            <div class="d-flex">
+              <!-- Add your second set of 4 cards here -->
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-1.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Azure & AWS Migration</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-2.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Power Bi</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-3.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Analytics</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-4.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Salesforce</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex">
+              <!-- Add your second set of 4 cards here -->
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-1.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Azure & AWS Migration</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-2.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Power Bi</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-3.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Analytics</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-4.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Salesforce</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex">
+              <!-- Add your second set of 4 cards here -->
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-1.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Azure & AWS Migration</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-2.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Power Bi</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-3.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Data Analytics</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="assets/img/test-4.png"
+                  alt="Card image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Salesforce</h5>
+                  <p class="card-text">
+                    MatrixOne is committed to cost-effectiveness, leveraging our
+                    partner network to deliver competitive pricing while
+                    maintaining the highest quality standards.
+                  </p>
+                  <a href="#" class="">View More</a>
+                  <img
+                    src="assets/img/arrow-right.png"
+                    class="arrow-right-img"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
           <!-- Continue adding carousel-item divs for additional sets of 4 cards -->
         </div>
       </div>
@@ -1270,9 +1567,16 @@
               </p>
               <p><i class="fas fa-phone"></i> (123) 456-7890</p>
               <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
-              <p class="social-media-icons">
-                <i class="fab fa-linkedin-in"></i> LinkedIn
-              </p>
+              <div>
+                <p class="social-media-icons">
+                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-google-plus"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-instagram"></i>
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-md-2">
@@ -1286,22 +1590,10 @@
               <li><a href="#" class="footer-item">Resources</a></li>
             </ul>
           </div>
-          <div class="col-md-2">
-            <h5 class="footer-title">Support</h5>
-            <ul>
-              <li><a href="#" class="footer-item">Help</a></li>
-              <li><a href="#" class="footer-item">Terms and Conditions</a></li>
-              <li><a href="#" class="footer-item">Privacy Policy</a></li>
-              <li><a href="#" class="footer-item">Returns and Policy</a></li>
-              <li><a href="#" class="footer-item">Partners</a></li>
-            </ul>
-          </div>
+
           <div class="col-md-4 newsletter-subscription">
             <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
-            <p class="footer-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor.
-            </p>
+            <p class="footer-text">Connect with us for latest blog</p>
             <div class="input-group mb-3">
               <input
                 type="email"
