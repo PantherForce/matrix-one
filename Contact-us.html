@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4Z9Y906W7P"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4Z9Y906W7P");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact-us</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .hero-section {
+        background: url("assets/img/contact-us-hero.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh;
+      }
+
+      .overlay {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .hero-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b;
+        border: none;
+        padding: 0.6rem 2rem;
+        border-radius: 20px;
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a;
+      }
+      .contact-text-1 {
+        color: rgba(195, 30, 50, 1);
+      }
+      .contact-form-btn {
+        background-color: white;
+        color: rgba(195, 30, 50, 1);
+        padding: 6px;
+        border: 1px solid #000;
+      }
+
+      .section-two-title {
+        color: rgba(195, 30, 50, 1);
+      }
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .btn-contact {
+        background-color: white;
+        color: rgba(195, 30, 50, 1);
+        font-weight: 500;
+        padding: 0.4em;
+      }
+      .checkmark-list li {
+        position: relative;
+        padding-left: 1.5em;
+        margin-bottom: 0.5em;
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .checkmark-list li::before {
+        position: absolute;
+        left: 0;
+      }
+
+      .about-section {
+        padding: 2em 0;
+      }
+      .about-section-about {
+        color: rgba(195, 30, 50, 1);
+        font-size: 1.4em;
+      }
+      .about-text {
+        padding-right: 1em;
+      }
+
+      .about-image {
+        background: url("assets/img/second-section-image.png") no-repeat center;
+        background-size: cover;
+      }
+
+      .about-section-head {
+        color: rgba(7, 8, 94, 1);
+      }
+      .special-color {
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .service-card {
+        border: none;
+        border-radius: 6px;
+        transition: background-color 0.3s, color 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-card:hover {
+        background-color: #07085e;
+        color: #ffffff;
+      }
+
+      .service-card .icon-wrapper {
+        width: 50px;
+        height: 50px;
+        gap: 3em;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
+
+      .service-card .icon-wrapper img {
+        width: 44px;
+        height: auto;
+      }
+
+      .icon-wrapper-1 img {
+        width: 28px;
+        margin-bottom: 10px;
+        height: auto;
+      }
+
+      .service-card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      .service-card-body {
+        padding: 1.5rem;
+      }
+      .service-card-text {
+        text-align: left;
+      }
+
+      .service-card:hover .service-card-title,
+      .service-card:hover .service-card-text,
+      .service-card:hover .icon-wrapper img {
+        color: #ffffff;
+        text-align: left;
+      }
+
+      .background-image {
+        background: url("assets/img/banner-section.png");
+        background-size: cover;
+        height: 50vh;
+      }
+
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        color: #ffffff;
+      }
+
+      @keyframes moveSlideshow {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 4));
+        }
+      }
+      .center-cont {
+        margin-bottom: 4em;
+      }
+      .ard {
+        min-width: 280px;
+        margin-right: 15px;
+        margin-top: 24px;
+        gap: 16em;
+      }
+
+      .moving-ards::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: contain;
+        background-image: inherit;
+        z-index: -1;
+      }
+
+      .contact-section {
+        padding: 40px 0;
+      }
+
+      .contact-form {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form .btn {
+        background-color: #ff0000;
+        color: #ffffff;
+        border: none;
+      }
+
+      .contact-form .btn:hover {
+        background-color: darken(#ff0000, 10%);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: row;
+        color: black;
+        gap: 10px;
+        border-radius: 8px;
+      }
+
+      .form-select {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .about-head1 {
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .about-head2 {
+        color: rgba(7, 8, 94, 1);
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .row {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+        justify-content: space-around;
+      }
+
+      .social-media-icons {
+        display: flex;
+        flex-direction: row;
+        font-size: 24px;
+        gap: 1em;
+        color: #fff;
+      }
+
+      .footer-text {
+        color: #fff;
+      }
+
+      .footer-section {
+        padding-top: 7em;
+      }
+
+      .footer-title {
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff;
+        background-color: #f00;
+      }
+
+      .btn-newsletter:hover {
+        color: #fff;
+        background-color: #c00;
+      }
+      .footer-logo {
+        width: 10em;
+        padding-bottom: 1.4em;
+      }
+
+      .footer-logo-1 {
+        padding-top: 2em;
+        width: 10em;
+      }
+      .contact-section {
+        padding: 30px 0;
+      }
+
+      .contact-text-container {
+        padding-right: 30px; /* Adjust the padding as needed */
+      }
+
+      .contact-form-container {
+        background-color: #0a194b; /* Dark blue background */
+        color: white; /* White text */
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .contact-form-input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+      }
+
+      .contact-form-input::placeholder {
+        color: white;
+      }
+
+      .contact-form-input:focus {
+        box-shadow: none;
+        border-color: white;
+      }
+
+      .contact-form-button {
+        background-color: white; /* White background */
+        color: #0a194b; /* Dark blue text */
+        border: none;
+        padding: 10px 40px;
+        border-radius: 10px; /* Rounded corners for the button */
+      }
+
+      .contact-form-button:hover {
+        background-color: #f8f9fa; /* Slightly different color on hover */
+      }
+      @media (max-width: 768px) {
+        .footer-upper {
+          text-align: center;
+        }
+        .hero-section h1 {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        .contact-text {
+          margin-left: 2em;
+        }
+        .form-page {
+          margin-left: 1em;
+        }
+
+        .contact-form-container {
+          margin-top: 0; /* No margin top on large screens */
+        }
+
+        .contact-form-button {
+          width: auto; /* Auto width on large screens */
+        }
+
+        .custom-heading {
+          font-size: 1.4em;
+        }
+        .custom-paragraph {
+          font-size: 1em;
+        }
+        .contact-image {
+          background: url(assets/img/form-side-image.png) no-repeat center
+            center;
+          background-size: cover;
+          height: 20em;
+          margin: 10px;
+        }
+
+        .carousel-item .d-flex {
+          flex-direction: column;
+        }
+        .logo-slide img {
+          padding: 6px;
+        }
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+        }
+
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          color: black;
+          gap: 10px;
+          border-radius: 8px;
+        }
+
+        .footer-text {
+          color: white;
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff;
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px;
+          color: #fff;
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+          margin-right: 6em;
+        }
+
+        .btn-newsletter {
+          color: #fff;
+          background-color: #f00;
+        }
+
+        .btn-newsletter:hover {
+          color: #fff;
+          background-color: #c00;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="Sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Fresh-opportunities.html"
+                >fresh opportunities</a
+              >
+              <a class="dropdown-item" href="Benchsales.html">Bench sales</a>
+              <a class="dropdown-item" href="Product.html">product</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Bench sales
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="IT services.html"
+                >IT Managed product</a
+              >
+              <a class="dropdown-item" href="Benchsales.html">Bench sales</a>
+              <a class="dropdown-item" href="Manage-services.html"
+                >Manage-services</a
+              >
+
+              <a class="dropdown-item" href="PMO-solution.html">PMO</a>
+              <a class="dropdown-item" href="PartnerNetwork.html"
+                >Partner network</a
+              >
+              <a class="dropdown-item" href="why-matrix-one.html"
+                >Why matrox-one</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="About-us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact-us.html">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay"></div>
+    </section>
+    <div class="container mt-5">
+      <!-- Contact Information -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="text-center">
+            <img
+              style="margin-bottom: 1em"
+              width="50px"
+              src="assets/img/contact-us-logo-1.png"
+              alt=""
+              srcset=""
+            />
+            <p>Phone Number</p>
+            <p>+1 (988)-588-6649</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <img
+              style="margin-bottom: 1em"
+              width="50px"
+              src="assets/img/contact-us-logo-2.png"
+              alt=""
+              srcset=""
+            />
+            <p>Email Address</p>
+            <p>email@example.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <img
+              style="margin-bottom: 1em"
+              width="50px"
+              src="assets/img/contact-us-logo-3.png"
+              alt=""
+              srcset=""
+            />
+            <p>Skype Number</p>
+            <p>skype_id</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5 contact-section">
+      <div class="row">
+        <!-- Left Column -->
+        <div class="col-lg-6 mb-4 mb-lg-0 contact-text">
+          <div class="contact-text-container">
+            <h2 class="contact-text-1">
+              Let’s Discuss About <br />
+              Requirement
+            </h2>
+            <p class="mb-4">
+              At our IT solution company, we are committed to providing
+              exceptional customer service and support. If you are experiencing
+              technical difficulties or need assistance with one of our services
+            </p>
+            <h2>Let’s Have a virtual Meet</h2>
+            <button type="button" class="btn contact-form-btn">
+              Schedule a meet
+            </button>
+          </div>
+        </div>
+        <!-- Right Column -->
+        <div class="col-lg-6 form-page">
+          <div class="contact-form-container">
+            <form>
+              <h2 class="mb-4">Fill The Contact Form</h2>
+              <p class="mb-4">Feel free to connect with us</p>
+              <div class="row mb-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <input
+                    type="text"
+                    class="form-control contact-form-input"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="email"
+                    class="form-control contact-form-input"
+                    placeholder="Your Email"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control contact-form-input"
+                  placeholder="Your Organization Name"
+                />
+              </div>
+              <div class="mb-3">
+                <select class="form-select contact-form-input">
+                  <option selected>Select Service</option>
+                  <!-- Add more options here -->
+                </select>
+              </div>
+              <div class="mb-4">
+                <textarea
+                  rows="3"
+                  class="form-control contact-form-input"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn contact-form-button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <img
+              class="footer-logo"
+              src="assets/img/logo-nav.png"
+              alt=""
+              srcset=""
+            />
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <div>
+                <p class="social-media-icons">
+                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-google-plus"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-instagram"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <ul>
+              <li>
+                <a href="#" class="footer-item">About us</a>
+              </li>
+              <li><a href="#" class="footer-item">Services</a></li>
+              <li><a href="#" class="footer-item">Hire From us</a></li>
+              <li><a href="#" class="footer-item">Resources</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">Connect with us for latest blog</p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+              <img
+                class="footer-logo-1"
+                src="assets/img/white-nasscom (1).png"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

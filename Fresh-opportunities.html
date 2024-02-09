@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4Z9Y906W7P"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4Z9Y906W7P");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Opportunities</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .hero-section {
+        background: url("assets/img/Fresh-opp-hero.png") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b;
+        /* Adjust button color as needed */
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 20px;
+        /* Rounded edges for button */
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a;
+        /* Slightly darker on hover */
+      }
+
+      .overlay {
+        display: none;
+      }
+
+      .job-card {
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .job-card-header {
+        background-color: #f8f8f8;
+        border-bottom: solid 1px #ddd;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      .job-card-body {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .job-card-footer {
+        background-color: #f8f8f8;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+      .find-job-btn {
+        background-color: #ff4b2b;
+        color: white;
+        border: none;
+      }
+      .search-bar {
+        margin-bottom: 2rem;
+      }
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .custom-btn {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 10px;
+        width: 12em;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .icon-park {
+        width: 50px;
+      }
+
+      .wave-shape {
+        background: url("assets/img/footer-img.png") no-repeat top;
+        background-size: cover;
+      }
+
+      .footer-text {
+        color: #fff;
+        /* Adjust the color to match your design */
+      }
+
+      .footer-section {
+        padding-top: 7em;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .footer-logo-1 {
+        padding-top: 2em;
+        width: 10em;
+      }
+
+      .footer-title {
+        color: #fff;
+        /* Adjust the color to match your design */
+        margin-bottom: 20px;
+      }
+
+      .footer-item {
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .social-media-icons {
+        display: flex;
+        flex-direction: row;
+        font-size: 24px;
+        gap: 1em;
+        color: #fff;
+      }
+
+      .newsletter-subscription {
+        max-width: 300px;
+      }
+
+      .btn-newsletter {
+        color: #fff;
+        /* Adjust the button text color as needed */
+        background-color: #f00;
+        /* Adjust the button background color as needed */
+      }
+
+      .btn-newsletter:hover {
+        color: #fff;
+        /* Adjust on hover */
+        background-color: #c00;
+        /* Darken the background on hover */
+      }
+
+      .footer-logo {
+        width: 10em;
+        padding-bottom: 1.4em;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          background: url("assets/img/manage-it-mobile.jpeg") center center;
+          background-size: cover;
+          color: white;
+          text-align: center;
+          height: 60vh;
+          /* Adjust height as needed */
+        }
+
+        .section-content-p {
+          font-size: 14px;
+          width: 20em;
+        }
+
+        .overlay {
+          /* Black background with opacity */
+          height: 100%;
+          display: flex;
+          font-size: 3em;
+          align-items: center;
+          font-weight: bold;
+          justify-content: center;
+          flex-direction: column;
+        }
+
+        .hero-section-2 {
+          background: url("assets/img/second-wrap.png") center center;
+          background-size: cover;
+          color: white;
+          display: flex;
+          padding: 2em;
+          justify-content: center;
+          align-items: center;
+          height: 40vh;
+          /* Adjust height as needed */
+          margin-top: 1.4em;
+        }
+
+        .overlay-2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          font-size: 11px;
+          font-weight: 300;
+          text-align: center;
+          font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        }
+
+        .second-heading {
+          font-size: 1.4em;
+        }
+
+        .logo-slide img {
+          padding: 6px;
+        }
+
+        .icon-park {
+          width: 30px;
+        }
+
+        .custom-section {
+          padding: 15px 0;
+        }
+
+        .custom-footer {
+          display: block;
+          background-color: rgba(1, 33, 105, 1);
+        }
+
+        .wave-shape {
+          background: url("assets/img/footer-img.png") no-repeat top;
+          background-size: cover;
+          padding-top: 16em;
+        }
+
+        .footer-text {
+          color: white;
+          /* Adjust the color to match your design */
+        }
+
+        .footer-section {
+          padding: 10px 0;
+        }
+
+        .footer-title {
+          color: #fff;
+          /* Adjust the color to match your design */
+          margin-bottom: 20px;
+          font-size: 1em;
+        }
+
+        .footer-item {
+          margin-bottom: 10px;
+          color: white;
+        }
+
+        .social-media-icons {
+          font-size: 24px;
+          color: #fff;
+        }
+
+        .newsletter-subscription {
+          max-width: 300px;
+        }
+
+        .btn-newsletter {
+          color: #fff;
+          background-color: #f00;
+        }
+
+        .btn-newsletter:hover {
+          color: #fff;
+          background-color: #c00;
+        }
+      }
+
+      /* Center content vertically and horizontally */
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html"
+        ><img
+          src="assets/img/logo-nav.png"
+          width="160px"
+          height="60px"
+          alt=""
+          srcset=""
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Blog.html">Blog</a>
+              <a class="dropdown-item" href="Sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Fresh-opportunities.html"
+                >fresh opportunities</a
+              >
+              <a class="dropdown-item" href="Benchsales.html">Bench sales</a>
+              <a class="dropdown-item" href="Product.html">product</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Bench sales
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="IT services.html"
+                >IT Managed product</a
+              >
+              <a class="dropdown-item" href="Benchsales.html">Bench sales</a>
+              <a class="dropdown-item" href="Manage-services.html"
+                >Manage-services</a
+              >
+
+              <a class="dropdown-item" href="PMO-solution.html">PMO</a>
+              <a class="dropdown-item" href="PartnerNetwork.html"
+                >Partner network</a
+              >
+              <a class="dropdown-item" href="why-matrix-one.html"
+                >Why matrox-one</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="About-us.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Contact-us.html">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="overlay"></div>
+    </section>
+    <div class="container mt-5">
+      <!-- Section header -->
+      <h2 class="text-center mb-3">Fresh Opportunities</h2>
+      <p class="text-center mb-5">
+        Reach out to us to receive innovative solutions for your business
+      </p>
+      <div class="input-group mb-5 search-bar">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by Job title, Position, Keyword..."
+        />
+        <button class="btn find-job-btn" type="button">Find Job</button>
+      </div>
+      <!-- Job cards -->
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              Java Developer
+              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><i class="bi bi-briefcase"></i> 3-5 years</span
+                >
+                <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+                <span class="me-2"
+                  ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+                >
+                <span class="badge">Technical</span>
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Job Type: C2C - 12 months
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 job-card">
+          <div class="card-header job-card-header">
+            Java Developer
+            <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+          </div>
+          <div class="card-body job-card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur. Amet donec blandit tortor
+              praesent enim nulla libero quis vitae. Ipsum ridiculus ac tellus
+              aliquam sollicitudin. Sed elementum gravida vel egestas amet hac.
+            </p>
+            <div class="mb-2">
+              <span class="me-2"
+                ><i class="bi bi-briefcase"></i> 3-5 years</span
+              >
+              <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+              <span class="me-2"
+                ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+              >
+              <span class="badge">Technical</span>
+            </div>
+          </div>
+          <div class="card-footer job-card-footer">
+            Job Type: C2C - 12 months
+          </div>
+        </div>
+        <div class="card h-100 job-card">
+          <div class="card-header job-card-header">
+            Java Developer
+            <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+          </div>
+          <div class="card-body job-card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur. Amet donec blandit tortor
+              praesent enim nulla libero quis vitae. Ipsum ridiculus ac tellus
+              aliquam sollicitudin. Sed elementum gravida vel egestas amet hac.
+            </p>
+            <div class="mb-2">
+              <span class="me-2"
+                ><i class="bi bi-briefcase"></i> 3-5 years</span
+              >
+              <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+              <span class="me-2"
+                ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+              >
+              <span class="badge">Technical</span>
+            </div>
+          </div>
+          <div class="card-footer job-card-footer">
+            Job Type: C2C - 12 months
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              Java Developer
+              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><i class="bi bi-briefcase"></i> 3-5 years</span
+                >
+                <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+                <span class="me-2"
+                  ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+                >
+                <span class="badge">Technical</span>
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Job Type: C2C - 12 months
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 job-card">
+          <div class="card-header job-card-header">
+            Java Developer
+            <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+          </div>
+          <div class="card-body job-card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur. Amet donec blandit tortor
+              praesent enim nulla libero quis vitae. Ipsum ridiculus ac tellus
+              aliquam sollicitudin. Sed elementum gravida vel egestas amet hac.
+            </p>
+            <div class="mb-2">
+              <span class="me-2"
+                ><i class="bi bi-briefcase"></i> 3-5 years</span
+              >
+              <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+              <span class="me-2"
+                ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+              >
+              <span class="badge">Technical</span>
+            </div>
+          </div>
+          <div class="card-footer job-card-footer">
+            Job Type: C2C - 12 months
+          </div>
+        </div>
+        <div class="card h-100 job-card">
+          <div class="card-header job-card-header">
+            Java Developer
+            <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+          </div>
+          <div class="card-body job-card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur. Amet donec blandit tortor
+              praesent enim nulla libero quis vitae. Ipsum ridiculus ac tellus
+              aliquam sollicitudin. Sed elementum gravida vel egestas amet hac.
+            </p>
+            <div class="mb-2">
+              <span class="me-2"
+                ><i class="bi bi-briefcase"></i> 3-5 years</span
+              >
+              <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+              <span class="me-2"
+                ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+              >
+              <span class="badge">Technical</span>
+            </div>
+          </div>
+          <div class="card-footer job-card-footer">
+            Job Type: C2C - 12 months
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              Java Developer
+              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><i class="bi bi-briefcase"></i> 3-5 years</span
+                >
+                <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+                <span class="me-2"
+                  ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+                >
+                <span class="badge">Technical</span>
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Job Type: C2C - 12 months
+            </div>
+          </div>
+        </div>
+        <div class="card h-100 job-card">
+          <div class="card-header job-card-header">
+            Java Developer
+            <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+          </div>
+          <div class="card-body job-card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur. Amet donec blandit tortor
+              praesent enim nulla libero quis vitae. Ipsum ridiculus ac tellus
+              aliquam sollicitudin. Sed elementum gravida vel egestas amet hac.
+            </p>
+            <div class="mb-2">
+              <span class="me-2"
+                ><i class="bi bi-briefcase"></i> 3-5 years</span
+              >
+              <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+              <span class="me-2"
+                ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+              >
+              <span class="badge">Technical</span>
+            </div>
+          </div>
+          <div class="card-footer job-card-footer">
+            Job Type: C2C - 12 months
+          </div>
+        </div>
+        <div class="card h-100 job-card">
+          <div class="card-header job-card-header">
+            Java Developer
+            <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+          </div>
+          <div class="card-body job-card-body">
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur. Amet donec blandit tortor
+              praesent enim nulla libero quis vitae. Ipsum ridiculus ac tellus
+              aliquam sollicitudin. Sed elementum gravida vel egestas amet hac.
+            </p>
+            <div class="mb-2">
+              <span class="me-2"
+                ><i class="bi bi-briefcase"></i> 3-5 years</span
+              >
+              <span class="me-2"><i class="bi bi-geo-alt"></i> Remote</span>
+              <span class="me-2"
+                ><i class="bi bi-currency-dollar"></i> 50k-60k</span
+              >
+              <span class="badge">Technical</span>
+            </div>
+          </div>
+          <div class="card-footer job-card-footer">
+            Job Type: C2C - 12 months
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape">
+      <div class="container mt-5">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <img
+              class="footer-logo"
+              src="assets/img/logo-nav.png"
+              alt=""
+              srcset=""
+            />
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
+                17th Street, St. louis 10001
+              </p>
+              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <div>
+                <p class="social-media-icons">
+                  <i class="fab fa-linkedin-in"></i>
+                  <i class="fab fa-facebook"></i>
+                  <i class="fab fa-google-plus"></i>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-instagram"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <ul>
+              <li>
+                <a href="#" class="footer-item">About us</a>
+              </li>
+              <li><a href="#" class="footer-item">Services</a></li>
+              <li><a href="#" class="footer-item">Hire From us</a></li>
+              <li><a href="#" class="footer-item">Resources</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">Connect with us for latest blog</p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-newsletter" type="button">
+                  Subscribe
+                </button>
+              </div>
+              <img
+                class="footer-logo-1"
+                src="assets/img/white-nasscom (1).png"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>
