@@ -18,7 +18,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Case studies</title>
-
+    <link rel="stylesheet" href="global.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -67,71 +67,6 @@
         margin-top: 1.2em;
       }
 
-      .wave-shape {
-        background: url("assets/img/footer-img.png") no-repeat top;
-        background-size: cover;
-      }
-
-      .footer-text {
-        color: #fff; /* Adjust the color to match your design */
-      }
-
-      .footer-section {
-        padding-top: 7em;
-      }
-
-      .footer-title {
-        color: #fff; /* Adjust the color to match your design */
-        margin-bottom: 20px;
-      }
-
-      .footer-item {
-        margin-bottom: 10px;
-        color: white;
-      }
-
-      .row {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-right: -15px;
-        margin-left: -15px;
-        justify-content: space-around;
-      }
-
-      .social-media-icons {
-        display: flex;
-        flex-direction: row;
-        font-size: 24px;
-        gap: 1em;
-        color: #fff;
-      }
-
-      .footer-logo-1 {
-        padding-top: 2em;
-        width: 10em;
-      }
-
-      .newsletter-subscription {
-        max-width: 300px;
-      }
-
-      .btn-newsletter {
-        color: #fff; /* Adjust the button text color as needed */
-        background-color: #f00; /* Adjust the button background color as needed */
-      }
-
-      .btn-newsletter:hover {
-        color: #fff; /* Adjust on hover */
-        background-color: #c00; /* Darken the background on hover */
-      }
-
-      .footer-logo {
-        width: 10em;
-        padding-bottom: 1.4em;
-      }
-
       @media (min-width: 992px) {
         .section-title {
           margin-bottom: 0;
@@ -140,15 +75,10 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="index.html"
-        ><img
-          src="assets/img/logo-nav.png"
-          width="160px"
-          height="60px"
-          alt=""
-          srcset=""
-      /></a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-nav.png" width="160px" height="60px" alt="" />
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -176,18 +106,18 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Resources
+              Services
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Blog.html">Blog</a>
-              <a class="dropdown-item" href="Sucess-stories.html"
-                >Success Stories</a
+              <a class="dropdown-item" href="Benchsales.html">Bench Sales</a>
+              <a class="dropdown-item" href="IT services.html"
+                >IT Managed Projects</a
               >
-              <a class="dropdown-item" href="Fresh-opportunities.html"
-                >fresh opportunities</a
+              <a class="dropdown-item" href="Product.html">Products</a>
+              <a class="dropdown-item" href="Manage-services.html"
+                >Service Management</a
               >
-              <a class="dropdown-item" href="Benchsales.html">Bench sales</a>
-              <a class="dropdown-item" href="Product.html">product</a>
+              <a class="dropdown-item" href="PMO-solution.html">PMO Services</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -199,30 +129,46 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Bench sales
+              Resources
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="IT services.html"
-                >IT Managed product</a
-              >
-              <a class="dropdown-item" href="Benchsales.html">Bench sales</a>
-              <a class="dropdown-item" href="Manage-services.html"
-                >Manage-services</a
-              >
+              <a class="dropdown-item" href="Benchsales.html">Current Bench</a>
 
-              <a class="dropdown-item" href="PMO-solution.html">PMO</a>
-              <a class="dropdown-item" href="PartnerNetwork.html"
-                >Partner network</a
+              <a class="dropdown-item" href="Fresh-opportunities.html"
+                >Fresh Requirement</a
               >
+              <a class="dropdown-item" href="Sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Blog.html">Blogs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="PartnerNetwork.html">Partners</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="About-us.html">About Us</a>
+
               <a class="dropdown-item" href="why-matrix-one.html"
-                >Why matrox-one</a
+                >Why matrixone</a
+              >
+              <a class="dropdown-item" href="IT services.html"
+                >Tech Solutions</a
               >
             </div>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="About-us.html">About us</a>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="Contact-us.html">Contact us</a>
           </li>
@@ -466,19 +412,14 @@
             />
             <div class="footer-text">
               <p>
-                <i class="fas fa-map-marker-alt"></i> ABC Company, 123 East,
-                17th Street, St. louis 10001
+                <i class="fas fa-map-marker-alt"></i> Vaishnavi's Cynosure,
+                Telecom Nagar Extension, Gachibowli, Hyderabad, Telangana 500032
               </p>
-              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-              <p><i class="fas fa-envelope"></i> (123) 456-7890</p>
+              <p><i class="fas fa-phone"></i>+91-98858-86649</p>
+              <p><i class="fas fa-envelope"></i>+91-98858-86649</p>
               <div>
                 <p class="social-media-icons">
                   <i class="fab fa-linkedin-in"></i>
-                  <i class="fab fa-facebook"></i>
-                  <i class="fab fa-google-plus"></i>
-                  <i class="fab fa-twitter"></i>
-                  <i class="fab fa-youtube"></i>
-                  <i class="fab fa-instagram"></i>
                 </p>
               </div>
             </div>
@@ -487,11 +428,22 @@
             <h5 class="footer-title">QUICK LINKS</h5>
             <ul>
               <li>
-                <a href="#" class="footer-item">About us</a>
+                <a href="#" class="footer-item">Home</a>
               </li>
-              <li><a href="#" class="footer-item">Services</a></li>
-              <li><a href="#" class="footer-item">Hire From us</a></li>
-              <li><a href="#" class="footer-item">Resources</a></li>
+              <li>
+                <a href="IT services.html" class="footer-item">Services</a>
+              </li>
+              <li>
+                <a href="PMO-solution.html" class="footer-item">Products</a>
+              </li>
+              <li>
+                <a href="Benchsales.html" class="footer-item">Resources</a>
+              </li>
+              <li><a href="#" class="footer-item">Partners</a></li>
+              <li><a href="About-us.html" class="footer-item">About Us</a></li>
+              <li>
+                <a href="Contact-us.html" class="footer-item">Contact US</a>
+              </li>
             </ul>
           </div>
 
@@ -505,18 +457,13 @@
                 placeholder="email@example.com"
                 aria-label="Recipient's email"
               />
-              <div class="input-group-append">
-                <button class="btn btn-newsletter" type="button">
-                  Subscribe
-                </button>
-              </div>
-              <img
-                class="footer-logo-1"
-                src="assets/img/white-nasscom (1).png"
-                alt=""
-                srcset=""
-              />
             </div>
+            <img
+              class="footer-logo-1"
+              src="assets/img/white-nasscom (1).png"
+              alt=""
+              srcset=""
+            />
           </div>
         </div>
       </div>

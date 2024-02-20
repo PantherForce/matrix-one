@@ -1,0 +1,78 @@
+.hero-section {
+  background: url("assets/img/hero-main.png") center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  height: 60vh;
+}
+
+.overlay {
+  height: 100%;
+  display: flex;
+  font-size: 4em;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section .btn {
+  background-color: #ff4b2b;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-section .btn:hover {
+  background-color: #ff3a1a;
+}
+
+.btn-nav {
+  border-radius: 29px;
+  background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+  display: flex;
+  padding: 6px 30px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
+}
+
+.card-img-top {
+  height: 160px; /* Fixed height for demo purposes, adjust as needed */
+  object-fit: cover;
+}
+.card-share-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.read-more {
+  color: #c31e32;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background: url("assets/img/hero-mobile.png") center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    height: 60vh; /* Adjust height as needed */
+  }
+
+  .custom-footer {
+    display: block;
+    background-color: rgba(1, 33, 105, 1);
+  }
+}
