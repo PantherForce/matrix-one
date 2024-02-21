@@ -50,7 +50,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 300;
         text-align: center;
         font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
@@ -147,6 +147,13 @@
         width: 50px;
       }
 
+      .floating-contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999; /* Ensure it stays on top of other content */
+      }
+
       @media (max-width: 768px) {
         .hero-section {
           background: url("assets/img/manage-it-mobile.jpeg") center center;
@@ -218,7 +225,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo-nav.png" width="160px" height="60px" alt="" />
+        <img src="assets/img/logo-nav.jpg" width="160px" height="60px" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -251,11 +258,11 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="Benchsales.html">Bench Sales</a>
-              <a class="dropdown-item" href="IT services.html"
+              <a class="dropdown-item" href="Manage-services.html"
                 >IT Managed Projects</a
               >
               <a class="dropdown-item" href="Product.html">Products</a>
-              <a class="dropdown-item" href="Manage-services.html"
+              <a class="dropdown-item" href="IT services.html"
                 >Service Management</a
               >
               <a class="dropdown-item" href="PMO-solution.html">PMO Services</a>
@@ -302,10 +309,7 @@
               <a class="dropdown-item" href="About-us.html">About Us</a>
 
               <a class="dropdown-item" href="why-matrix-one.html"
-                >Why matrixone</a
-              >
-              <a class="dropdown-item" href="IT services.html"
-                >Tech Solutions</a
+                >Why Matrixone</a
               >
             </div>
           </li>
@@ -320,15 +324,13 @@
       </div>
     </nav>
 
+    <a href="/Contact-us.html" class="btn-nav floating-contact"> Contact Us </a>
     <section class="hero-section">
       <div class="overlay">Innovative IT Service Management</div>
     </section>
 
     <section class="hero-section-2">
       <div class="overlay-2">
-        <h2 class="second-heading">
-          Embracing the Digital Frontier: Your Partner for Transformation
-        </h2>
         <p style="margin-top: 1.3em">
           <img
             class="icon-park"
@@ -517,17 +519,20 @@
           <div class="col-md-4">
             <img
               class="footer-logo"
-              src="assets/img/logo-nav.png"
+              src="assets/img/logo-nav.jpg"
               alt=""
               srcset=""
             />
             <div class="footer-text">
               <p>
-                <i class="fas fa-map-marker-alt"></i> Vaishnavi's Cynosure,
-                Telecom Nagar Extension, Gachibowli, Hyderabad, Telangana 500032
+                <i class="fas fa-map-marker-alt"></i> Vaishnavi's Cynosure,<br />
+                Telecom Nagar Extension, Gachibowli,<br />
+                Hyderabad, Telangana 500032
               </p>
               <p><i class="fas fa-phone"></i>+91-98858-86649</p>
-              <p><i class="fas fa-envelope"></i>+91-98858-86649</p>
+              <p>
+                <i class="fas fa-envelope"></i> farm@matrixonetechsolutions.com
+              </p>
               <div>
                 <p class="social-media-icons">
                   <i class="fab fa-linkedin-in"></i>
@@ -544,9 +549,7 @@
               <li>
                 <a href="IT services.html" class="footer-item">Services</a>
               </li>
-              <li>
-                <a href="PMO-solution.html" class="footer-item">Products</a>
-              </li>
+
               <li>
                 <a href="Benchsales.html" class="footer-item">Resources</a>
               </li>
@@ -569,7 +572,6 @@
                 aria-label="Recipient's email"
               />
             </div>
-
             <img
               class="footer-logo-1"
               src="assets/img/white-nasscom (1).png"

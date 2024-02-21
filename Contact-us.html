@@ -46,7 +46,7 @@
         margin-bottom: 1rem;
       }
 
-      .hero-section .btn {
+      .contact-btn {
         background-color: #ff4b2b;
         border: none;
         padding: 0.6rem 2rem;
@@ -122,6 +122,16 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
+      .hero-section .btn {
+        background-color: #ff4b2b;
+        border: none;
+        padding: 0.6rem 2rem;
+        border-radius: 20px;
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
       .service-card:hover {
         background-color: #07085e;
         color: #ffffff;
@@ -168,6 +178,13 @@
       .service-card:hover .icon-wrapper img {
         color: #ffffff;
         text-align: left;
+      }
+
+      .floating-contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999; /* Ensure it stays on top of other content */
       }
 
       .background-image {
@@ -281,7 +298,7 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid white;
-        color: white;
+        color: red;
       }
 
       .contact-form-input::placeholder {
@@ -290,7 +307,7 @@
 
       .contact-form-input:focus {
         box-shadow: none;
-        border-color: white;
+        border-color: black;
       }
 
       .contact-form-button {
@@ -355,7 +372,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo-nav.png" width="160px" height="60px" alt="" />
+        <img src="assets/img/logo-nav.jpg" width="160px" height="60px" alt="" />
       </a>
       <button
         class="navbar-toggler"
@@ -388,11 +405,11 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="Benchsales.html">Bench Sales</a>
-              <a class="dropdown-item" href="IT services.html"
+              <a class="dropdown-item" href="Manage-services.html"
                 >IT Managed Projects</a
               >
               <a class="dropdown-item" href="Product.html">Products</a>
-              <a class="dropdown-item" href="Manage-services.html"
+              <a class="dropdown-item" href="IT services.html"
                 >Service Management</a
               >
               <a class="dropdown-item" href="PMO-solution.html">PMO Services</a>
@@ -439,10 +456,7 @@
               <a class="dropdown-item" href="About-us.html">About Us</a>
 
               <a class="dropdown-item" href="why-matrix-one.html"
-                >Why matrixone</a
-              >
-              <a class="dropdown-item" href="IT services.html"
-                >Tech Solutions</a
+                >Why Matrixone</a
               >
             </div>
           </li>
@@ -456,6 +470,7 @@
         </div>
       </div>
     </nav>
+    <a href="/Contact-us.html" class="btn-nav floating-contact"> Contact Us </a>
 
     <section class="hero-section-contact">
       <div class="overlay-contact"></div>
@@ -473,7 +488,7 @@
               srcset=""
             />
             <p>Phone Number</p>
-            <p>+1 (988)-588-6649</p>
+            <p>+91 (988)-588-6649</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -486,7 +501,7 @@
               srcset=""
             />
             <p>Email Address</p>
-            <p>email@example.com</p>
+            <p>farm@matrixonetechsolutions.com</p>
           </div>
         </div>
         <div class="col-md-4">
@@ -519,17 +534,15 @@
               technical difficulties or need assistance with one of our services
             </p>
             <h2>Let’s Have a virtual Meet</h2>
-            <button type="button" class="btn contact-form-btn">
-              Schedule a meet
-            </button>
+            <button type="button" class="contact-btn">Schedule a meet</button>
           </div>
         </div>
         <!-- Right Column -->
         <div class="col-lg-6 form-page">
           <div class="contact-form-container">
             <form>
-              <h2 class="mb-4">Fill The Contact Form</h2>
-              <p class="mb-4">Feel free to connect with us</p>
+              <h2 class="mb-4">Feel free to connect with us</h2>
+
               <div class="row mb-3">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <input
@@ -555,7 +568,11 @@
               </div>
               <div class="mb-3">
                 <select class="form-select contact-form-input">
-                  <option selected>Select Service</option>
+                  <option selected>Bench Sales</option>
+                  <option selected>IT Managed Projects</option>
+                  <option selected>Products</option>
+                  <option selected>Service Management</option>
+                  <option selected>PMO Service</option>
                   <!-- Add more options here -->
                 </select>
               </div>
@@ -581,17 +598,20 @@
           <div class="col-md-4">
             <img
               class="footer-logo"
-              src="assets/img/logo-nav.png"
+              src="assets/img/logo-nav.jpg"
               alt=""
               srcset=""
             />
             <div class="footer-text">
               <p>
-                <i class="fas fa-map-marker-alt"></i> Vaishnavi's Cynosure,
-                Telecom Nagar Extension, Gachibowli, Hyderabad, Telangana 500032
+                <i class="fas fa-map-marker-alt"></i> Vaishnavi's Cynosure,<br />
+                Telecom Nagar Extension, Gachibowli,<br />
+                Hyderabad, Telangana 500032
               </p>
               <p><i class="fas fa-phone"></i>+91-98858-86649</p>
-              <p><i class="fas fa-envelope"></i>+91-98858-86649</p>
+              <p>
+                <i class="fas fa-envelope"></i> farm@matrixonetechsolutions.com
+              </p>
               <div>
                 <p class="social-media-icons">
                   <i class="fab fa-linkedin-in"></i>
@@ -608,9 +628,7 @@
               <li>
                 <a href="IT services.html" class="footer-item">Services</a>
               </li>
-              <li>
-                <a href="PMO-solution.html" class="footer-item">Products</a>
-              </li>
+
               <li>
                 <a href="Benchsales.html" class="footer-item">Resources</a>
               </li>
@@ -633,7 +651,6 @@
                 aria-label="Recipient's email"
               />
             </div>
-
             <img
               class="footer-logo-1"
               src="assets/img/white-nasscom (1).png"
