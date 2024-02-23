@@ -59,11 +59,20 @@
         display: none;
       }
 
+      .active-div {
+        background-color: rgba(254, 214, 220, 1);
+        color: rgba(195, 30, 50, 1);
+        border-radius: 10px;
+      }
+
       .job-card {
         border: none;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
       .job-card-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         background-color: #f8f8f8;
         border-bottom: solid 1px #ddd;
         font-weight: bold;
@@ -115,6 +124,17 @@
         bottom: 20px;
         right: 20px;
         z-index: 9999; /* Ensure it stays on top of other content */
+      }
+
+      .btn-contact {
+        border-radius: 29px;
+        background: rgba(195, 30, 50, 1);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
       }
 
       @media (max-width: 768px) {
@@ -197,7 +217,9 @@
               Resources
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Benchsales.html">Current Bench</a>
+              <a class="dropdown-item" href="Bench-opportunities.html"
+                >Current Bench</a
+              >
 
               <a class="dropdown-item" href="Fresh-opportunities.html"
                 >Fresh Requirement</a
@@ -241,7 +263,9 @@
       </div>
     </nav>
 
-    <a href="/Contact-us.html" class="btn-nav floating-contact"> Contact Us </a>
+    <a href="/Contact-us.html" class="btn-contact floating-contact">
+      Contact Us
+    </a>
 
     <section class="hero-section">
       <div class="overlay"></div>
@@ -266,7 +290,9 @@
           <div class="card h-100 job-card">
             <div class="card-header job-card-header">
               Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
             </div>
             <div class="card-body job-card-body">
               <p class="card-text">
@@ -301,7 +327,9 @@
           <div class="card h-100 job-card">
             <div class="card-header job-card-header">
               Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
             </div>
             <div class="card-body job-card-body">
               <p class="card-text">
@@ -336,115 +364,9 @@
           <div class="card h-100 job-card">
             <div class="card-header job-card-header">
               Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
-            </div>
-            <div class="card-body job-card-body">
-              <p class="card-text">
-                <img src="/assets/img/file-text.png" alt="" srcset="" />
-                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
-                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
-                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
-                amet hac.
-              </p>
-              <div class="mb-2">
-                <span class="me-2"
-                  ><img src="/assets/img/briefcase.png" alt="" srcset="" /> 3-5
-                  years</span
-                >
-                <span class="me-2"
-                  ><img src="assets/img/map-pin.png" alt="" srcset="" />
-                  Remote</span
-                >
-                <span class="me-2"
-                  ><img src="/assets/img/mdi_rupee.png" alt="" srcset="" />
-                  50k-60k</span
-                >
-                <span class="badge">Technical</span>
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
               </div>
-            </div>
-            <div class="card-footer job-card-footer">
-              Job Type: C2C - 12 months
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
-        <!-- Single job card -->
-        <div class="col">
-          <div class="card h-100 job-card">
-            <div class="card-header job-card-header">
-              Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
-            </div>
-            <div class="card-body job-card-body">
-              <p class="card-text">
-                <img src="/assets/img/file-text.png" alt="" srcset="" />
-                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
-                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
-                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
-                amet hac.
-              </p>
-              <div class="mb-2">
-                <span class="me-2"
-                  ><img src="/assets/img/briefcase.png" alt="" srcset="" /> 3-5
-                  years</span
-                >
-                <span class="me-2"
-                  ><img src="assets/img/map-pin.png" alt="" srcset="" />
-                  Remote</span
-                >
-                <span class="me-2"
-                  ><img src="/assets/img/mdi_rupee.png" alt="" srcset="" />
-                  50k-60k</span
-                >
-                <span class="badge">Technical</span>
-              </div>
-            </div>
-            <div class="card-footer job-card-footer">
-              Job Type: C2C - 12 months
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 job-card">
-            <div class="card-header job-card-header">
-              Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
-            </div>
-            <div class="card-body job-card-body">
-              <p class="card-text">
-                <img src="/assets/img/file-text.png" alt="" srcset="" />
-                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
-                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
-                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
-                amet hac.
-              </p>
-              <div class="mb-2">
-                <span class="me-2"
-                  ><img src="/assets/img/briefcase.png" alt="" srcset="" /> 3-5
-                  years</span
-                >
-                <span class="me-2"
-                  ><img src="assets/img/map-pin.png" alt="" srcset="" />
-                  Remote</span
-                >
-                <span class="me-2"
-                  ><img src="/assets/img/mdi_rupee.png" alt="" srcset="" />
-                  50k-60k</span
-                >
-                <span class="badge">Technical</span>
-              </div>
-            </div>
-            <div class="card-footer job-card-footer">
-              Job Type: C2C - 12 months
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100 job-card">
-            <div class="card-header job-card-header">
-              Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
             </div>
             <div class="card-body job-card-body">
               <p class="card-text">
@@ -482,7 +404,9 @@
           <div class="card h-100 job-card">
             <div class="card-header job-card-header">
               Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
             </div>
             <div class="card-body job-card-body">
               <p class="card-text">
@@ -517,7 +441,9 @@
           <div class="card h-100 job-card">
             <div class="card-header job-card-header">
               Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
             </div>
             <div class="card-body job-card-body">
               <p class="card-text">
@@ -552,7 +478,123 @@
           <div class="card h-100 job-card">
             <div class="card-header job-card-header">
               Java Developer
-              <span class="badge bg-danger ms-2">Active Till 31st Jan</span>
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img src="/assets/img/briefcase.png" alt="" srcset="" /> 3-5
+                  years</span
+                >
+                <span class="me-2"
+                  ><img src="assets/img/map-pin.png" alt="" srcset="" />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img src="/assets/img/mdi_rupee.png" alt="" srcset="" />
+                  50k-60k</span
+                >
+                <span class="badge">Technical</span>
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Job Type: C2C - 12 months
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              Java Developer
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img src="/assets/img/briefcase.png" alt="" srcset="" /> 3-5
+                  years</span
+                >
+                <span class="me-2"
+                  ><img src="assets/img/map-pin.png" alt="" srcset="" />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img src="/assets/img/mdi_rupee.png" alt="" srcset="" />
+                  50k-60k</span
+                >
+                <span class="badge">Technical</span>
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Job Type: C2C - 12 months
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              Java Developer
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img src="/assets/img/briefcase.png" alt="" srcset="" /> 3-5
+                  years</span
+                >
+                <span class="me-2"
+                  ><img src="assets/img/map-pin.png" alt="" srcset="" />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img src="/assets/img/mdi_rupee.png" alt="" srcset="" />
+                  50k-60k</span
+                >
+                <span class="badge">Technical</span>
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Job Type: C2C - 12 months
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              Java Developer
+              <div class="active-div">
+                <span class="badge ms-2">Active Till 31st Jan</span>
+              </div>
             </div>
             <div class="card-body job-card-body">
               <p class="card-text">

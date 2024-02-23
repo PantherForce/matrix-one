@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4Z9Y906W7P"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-4Z9Y906W7P");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Opportunities</title>
+    <link rel="stylesheet" href="global.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .hero-section {
+        background: url("assets/img/bench-opp.jpeg") center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        height: 60vh;
+      }
+
+      .hero-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-section .btn {
+        background-color: #ff4b2b;
+        border: none;
+        padding: 0.75rem 2rem;
+        border-radius: 20px;
+        /* Rounded edges for button */
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+
+      .hero-section .btn:hover {
+        background-color: #ff3a1a;
+        /* Slightly darker on hover */
+      }
+
+      .overlay {
+        /* Black background with opacity */
+        height: 100%;
+        display: flex;
+        font-size: 3em;
+        align-items: center;
+        font-weight: bold;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .inside-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .job-card {
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .job-card-header {
+        background-color: #f8f8f8;
+        border-bottom: solid 1px #ddd;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+      .job-card-body {
+        padding: 1rem;
+        font-size: 0.9rem;
+      }
+      .job-card-footer {
+        background-color: #f8f8f8;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+      .find-job-btn {
+        background-color: #ff4b2b;
+        color: white;
+        border: none;
+      }
+      .search-bar {
+        margin-bottom: 2rem;
+      }
+      .btn-nav {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .custom-btn {
+        border-radius: 29px;
+        background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+        display: flex;
+        padding: 6px 10px;
+        width: 12em;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      .floating-contact {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999; /* Ensure it stays on top of other content */
+      }
+
+      .badge-fresh {
+        border-radius: 10px;
+        background: rgba(254, 214, 220, 1);
+        display: flex;
+        padding: 3px 4px;
+        justify-content: center;
+        align-items: center;
+        color: rgba(195, 30, 50, 1);
+      }
+
+      .btn-contact {
+        border-radius: 29px;
+        background: rgba(195, 30, 50, 1);
+        display: flex;
+        padding: 6px 30px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 10px;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          background: url("assets/img/manage-it-mobile.jpeg") center center;
+          background-size: cover;
+          color: white;
+          text-align: center;
+          height: 60vh;
+        }
+
+        .overlay {
+          height: 100%;
+          display: flex;
+          font-size: 3em;
+          align-items: center;
+          font-weight: bold;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/img/logo-nav.jpg" width="160px" height="60px" alt="" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav mr-auto ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Benchsales.html">Bench Sales</a>
+              <a class="dropdown-item" href="Manage-services.html"
+                >IT Managed Projects</a
+              >
+              <a class="dropdown-item" href="Product.html">Products</a>
+              <a class="dropdown-item" href="IT services.html"
+                >Service Management</a
+              >
+              <a class="dropdown-item" href="PMO-solution.html">PMO Services</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Resources
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="Bench-opportunities.html"
+                >Current Bench</a
+              >
+
+              <a class="dropdown-item" href="Fresh-opportunities.html"
+                >Fresh Requirement</a
+              >
+              <a class="dropdown-item" href="Sucess-stories.html"
+                >Success Stories</a
+              >
+              <a class="dropdown-item" href="Blog.html">Blogs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="PartnerNetwork.html">Partners</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="About-us.html">About Us</a>
+
+              <a class="dropdown-item" href="why-matrix-one.html"
+                >Why Matrixone</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="Contact-us.html">Contact us</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <button class="btn-nav" type="submit">Hire From us</button>
+        </div>
+      </div>
+    </nav>
+
+    <a href="/Contact-us.html" class="btn-contact floating-contact">
+      Contact Us
+    </a>
+
+    <section class="hero-section">
+      <div class="overlay">Bench Opportunities</div>
+    </section>
+    <div class="container mt-5">
+      <h2 class="text-center mb-3">Bench Opportunities</h2>
+      <p class="text-center mb-5">
+        Reach out to us to receive innovative solutions for your business
+      </p>
+      <div class="input-group mb-5 search-bar">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by Job title, Position, Keyword..."
+        />
+        <button class="btn find-job-btn" type="button">Find Job</button>
+      </div>
+      <!-- Job cards -->
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mt-4 g-8">
+        <!-- Single job card -->
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 job-card">
+            <div class="card-header job-card-header">
+              <div class="inside-head">
+                <p>John Doe</p>
+                <span class="badge badge-fresh">Active Till 31st Jan</span>
+              </div>
+              <div>
+                <p style="font-size: 13px">Java Developer</p>
+              </div>
+            </div>
+            <div class="card-body job-card-body">
+              <p class="card-text">
+                <img src="/assets/img/file-text.png" alt="" srcset="" />
+                Lorem ipsum dolor sit amet consectetur. Amet donec blandit
+                tortor praesent enim nulla libero quis vitae. Ipsum ridiculus ac
+                tellus aliquam sollicitudin. Sed elementum gravida vel egestas
+                amet hac.
+              </p>
+              <div class="mb-2">
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/briefcase.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  3-5 years</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="assets/img/map-pin.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  Remote</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/mdi_rupee.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+                <span class="me-2"
+                  ><img
+                    src="/assets/img/grommet-icons_technology.png"
+                    width="18px"
+                    alt=""
+                    srcset=""
+                  />
+                  50k-60k</span
+                >
+              </div>
+            </div>
+            <div class="card-footer job-card-footer">
+              Model: C2C - 12 Start date: 20-02-2024
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="wave-shape mt-5">
+      <div class="container">
+        <div class="row footer-section">
+          <div class="col-md-4">
+            <img
+              class="footer-logo"
+              src="assets/img/logo-nav.jpg"
+              alt=""
+              srcset=""
+            />
+            <div class="footer-text">
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Vaishnavi's Cynosure,<br />
+                Telecom Nagar Extension, Gachibowli,<br />
+                Hyderabad, Telangana 500032
+              </p>
+              <p><i class="fas fa-phone"></i>+91-98858-86649</p>
+              <p>
+                <i class="fas fa-envelope"></i> farm@matrixonetechsolutions.com
+              </p>
+              <div>
+                <p class="social-media-icons">
+                  <i class="fab fa-linkedin-in"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <h5 class="footer-title">QUICK LINKS</h5>
+            <ul>
+              <li>
+                <a href="#" class="footer-item">Home</a>
+              </li>
+              <li>
+                <a href="IT services.html" class="footer-item">Services</a>
+              </li>
+
+              <li>
+                <a href="Benchsales.html" class="footer-item">Resources</a>
+              </li>
+              <li><a href="#" class="footer-item">Partners</a></li>
+              <li><a href="About-us.html" class="footer-item">About Us</a></li>
+              <li>
+                <a href="Contact-us.html" class="footer-item">Contact US</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 newsletter-subscription">
+            <h5 class="footer-title">SUBSCRIBE TO OUR NEWSLETTER</h5>
+            <p class="footer-text">Connect with us for latest blog</p>
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="email@example.com"
+                aria-label="Recipient's email"
+              />
+            </div>
+            <img
+              class="footer-logo-1"
+              src="assets/img/white-nasscom (1).png"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </body>
+</html>

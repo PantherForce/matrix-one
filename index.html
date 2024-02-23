@@ -34,8 +34,8 @@
 
       .overlay {
         height: 100%;
+        padding: 4em;
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: column;
         text-align: left;
@@ -59,6 +59,10 @@
 
       .hero-section .btn:hover {
         background-color: #ff3a1a;
+      }
+
+      .overlay-head-2 {
+        font-size: 1.2em;
       }
 
       .btn-connect {
@@ -360,9 +364,9 @@
           text-align: center;
         }
         .hero-section h1 {
-          font-size: 1rem;
+          font-size: 1.2rem;
           margin-bottom: 1rem;
-          text-align: center;
+          text-align: left;
         }
         .contact-info {
           flex-direction: column;
@@ -383,6 +387,17 @@
 
         .carousel-item .d-flex {
           flex-direction: column;
+        }
+        .overlay {
+          height: 100%;
+          padding: 1em;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: left;
+        }
+        .overlay-head-2 {
+          font-size: 1.4em;
         }
       }
     </style>
@@ -446,7 +461,9 @@
               Resources
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="Benchsales.html">Current Bench</a>
+              <a class="dropdown-item" href="Bench-opportunities.html"
+                >Current Bench</a
+              >
 
               <a class="dropdown-item" href="Fresh-opportunities.html"
                 >Fresh Requirement</a
@@ -490,19 +507,21 @@
       </div>
     </nav>
 
-    <a href="/Contact-us.html" class="btn-nav floating-contact"> Contact Us </a>
+    <a href="/Contact-us.html" class="btn-contact floating-contact">
+      Contact Us
+    </a>
 
     <section class="hero-section">
       <div class="overlay">
         <h1>My name is MatrixOne Tech Solutions</h1>
 
-        <h3>
+        <h3 class="overlay-head-2">
           We are
           <span style="font-weight: bold"> Aggregator of IT Organizations</span>
           - a Workforce Uberization Specialist
         </h3>
-        <div class="mt-2">
-          <a href="#" class="btn-nav">Let's Connect</a>
+        <div class="mt-4">
+          <a href="#" class="btn-hero">Let's Connect</a>
         </div>
       </div>
     </section>
@@ -795,7 +814,7 @@
               <div class="icon-wrapper-1">
                 <img src="assets/img/icon-4.png" alt="Icon 1" />
               </div>
-              <h5 class="ard-title">IT products</h5>
+              <h5 class="ard-title">IT Products</h5>
               <p class="ard-text">
                 Unleash the Potential of Emerging Technologies: AI, ML,
                 Blockchain, and Cloud with MatrixOne. Transform your Tech into
@@ -899,7 +918,7 @@
               <div class="icon-wrapper-1">
                 <img src="assets/img/icon-4.png" alt="Icon 1" />
               </div>
-              <h5 class="ard-title">IT products</h5>
+              <h5 class="ard-title">IT Products</h5>
               <p class="ard-text">
                 Unleash the Potential of Emerging Technologies: AI, ML,
                 Blockchain, and Cloud with MatrixOne. Transform your Tech into
@@ -1481,10 +1500,6 @@
                 <button type="submit" class="btn btn-primary">SEND</button>
               </form>
               <div class="contact-info mt-4">
-                <div class="info-item">
-                  <img src="assets\img\phone-logo.png" alt="Phone" />
-                  <span>+91-98858-86649</span>
-                </div>
                 <div class="info-item">
                   <img src="assets\img\fax-logo.png" alt="Fax" />
 

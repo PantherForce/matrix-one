@@ -3,10 +3,22 @@
   background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
   display: flex;
   padding: 6px 30px;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   color: white;
   gap: 10px;
+}
+
+.btn-hero {
+  border-radius: 29px;
+  background: linear-gradient(90deg, #dc2424 0%, #4a569d 100%);
+  padding: 6px 30px;
+  color: white;
+  gap: 10px;
+}
+
+.badge-fresh {
+  background-color: rgba(254, 214, 220, 1);
 }
 
 .logo-slider {
@@ -126,6 +138,17 @@
 .footer-logo-1 {
   padding-top: 2em;
   width: 10em;
+}
+
+.btn-contact {
+  border-radius: 29px;
+  background: rgba(195, 30, 50, 1);
+  display: flex;
+  padding: 6px 30px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 10px;
 }
 
 @media (max-width: 768px) {
